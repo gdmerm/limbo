@@ -4,7 +4,7 @@ require_once("models/Product.php");
 require_once("controllers/DBTableController.php");
 require_once("controllers/Products.php");
 
-$viewData = array();
+$viewData = array("data" => null);
 $prodController = new Products();
 $prodController->setDBlink($db);
 
@@ -31,10 +31,14 @@ $product = $prodController->getSingleById(2);
 //$prodController->delete(2);
 
 //append product to view data
-$viewData["product"] = $product->getFields();
+$viewData["data"]["product"] = $product->getFields();
 $viewData = json_encode($viewData);
-?>
 
-<?php
-    include("templates/home.php");
+if (isset($_GET["debug"]) && $_GET["debug"] == "data"){
+    echo $viewData;
+    exit;
+}
+
+include("templates/home.php");
+
 ?>

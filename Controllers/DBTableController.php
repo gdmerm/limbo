@@ -39,6 +39,11 @@ abstract class DBTableController {
         return $this->dblink;
     }
 
+    public function arrayGroupBy($input,$sortkey){
+        foreach ($input as $key=>$val) $output[$val[$sortkey]][]=$val;
+        return $output;
+    }
+
     abstract public function save($model);
 
     abstract public function getSingleById($modelID);

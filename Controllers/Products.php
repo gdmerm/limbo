@@ -12,7 +12,8 @@ class Products extends DBTableController {
         "INSERT" => "insert into products (`name`, `studio`, `publisher`, `languages`, `multiplayer`, `description`, `genre`, `releaseDate`, `rating`, `price`, `discountPercent`) values (?,?,?,?,?,?,?,?,?,?,?)",
         "UPDATE" => "update products set `name`=?, `studio`=?, `publisher`=?, `languages`=?, `multiplayer`=?, `description`=?, `genre`=?, `releaseDate`=?, `rating`=?, `price`=?, `discountPercent`=? where `productid`=?",
         "SELECT" => "select * from products where productid=?",
-        "DELETE" => "delete from products where productid=?"
+        "DELETE" => "delete from products where productid=?",
+        "SELECT_BY_GENRE" => "select * from products where genre=?"
     );
 
     private $fields = array(
@@ -47,6 +48,7 @@ class Products extends DBTableController {
         $stmt->prepare($sql);
         $stmt->bind_param("ssssisssidi", $this->fields["name"], $this->fields["studio"], $this->fields["publisher"], $this->fields["languages"], $this->fields["multiplayer"], $this->fields["description"], $this->fields["genre"], $this->fields["releaseDate"], $this->fields["rating"], $this->fields["price"], $this->fields["discountPercent"]);
         $stmt->execute();
+        $stmt->close();
         return $db->insert_id;
     }
 
@@ -63,7 +65,42 @@ class Products extends DBTableController {
         //return $this->getContract();
         $product = new Product($productid);
         $product->setFields($this->getContract());
+        $stmt->close();
         return $product;
+    }
+
+    public function getByGenre($genre) {
+        $db = $this->getDBlink();
+        $sql = $this->sqlStatements["SELECT_BY_GENRE"];
+        $stmt = $db->stmt_init();
+        $results = array();
+        $results_index = 0;
+        if ($stmt->prepare($sql)) {
+            $stmt->bind_param("s", $genre);
+            $stmt->execute();
+            $stmt->bind_result($productid, $name, $studio, $publisher, $langs, $multiplayer, $description, $genre, $releaseDate, $rating, $price, $discountPercent, $vat);
+            while ($stmt->fetch()) {
+                $results[$results_index] = array(
+                    "productid" => $productid,
+                    "name" => $name,
+                    "studio" => $studio,
+                    "publisher" => $publisher,
+                    "languages" => $langs,
+                    "multiplayer" => $multiplayer,
+                    "description" => $description,
+                    "genre" => $genre,
+                    "releaseDate" => $releaseDate,
+                    "rating" => $rating,
+                    "price" => $price,
+                    "discountPercent" => $discountPercent,
+                    "vat" => $vat
+                );
+                $results_index++;
+            }
+        }
+        $stmt->close();
+        return $results;
+        //return $this->arrayGroupBy($results, "genre");
     }
 
     public function delete($productid) {
@@ -74,6 +111,7 @@ class Products extends DBTableController {
             $stmt->bind_param("i", $productid);
             $stmt->execute();
         }
+        $stmt->close();
     }
 
     public function update($productid) {
