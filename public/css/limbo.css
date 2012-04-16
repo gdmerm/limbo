@@ -1,0 +1,429 @@
+body {
+    color: #FFFFFF;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    margin:0;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+h5 {
+    font-size: 10px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#global-header {
+    background: url("../images/header_bg.jpg") repeat-x center top;
+    height: 104px;
+}
+
+div.content {
+    background-position: center top;
+    height: 104px;
+    margin: auto;
+    position: relative;
+    width: 940px;
+}
+
+#global-header div.logo {
+    float: left;
+    height: 44px;
+    margin-right: 40px;
+    padding-top: 30px;
+    width: 176px;
+}
+
+#global-header .header-item-active{
+    background: url("../images/itemactive.png") repeat-x center top;
+    display: block;
+    width:48px;
+    height: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    position: relative;
+    padding: 40px 20px 7px;
+    float: left;
+}
+
+#global-header .header-item{
+    color: #B8B6B4;
+    display: block;
+    float: left;
+    font-size: 14px;
+    padding: 40px 20px 7px;
+    position: relative;
+    text-decoration: none;
+}
+
+#global-header .header-item:hover{
+   color: #FFFFFF;
+}
+
+#global-header .global-actions{
+    font-size: 11px;
+    height: 21px;
+    line-height: 21px;
+    position: absolute;
+    top: 6px;
+    right: 0;
+    font-weight: bold;
+}
+
+#global-header a.register{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#games-header{
+    height: 66px;
+    background-color: #3B3938;
+
+}
+
+#games-header .games-navigation-area{
+    height: 49px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 24px;
+}
+
+#games-header .games-navigation{
+    height: 35px;
+}
+
+.tab-active{
+    border-right: 1px solid #000000;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-size: 11px;
+    line-height: 35px;
+    padding: 0 40px;
+    text-decoration: none;
+    background-color: #86b3d9; /* for non-css3 browsers */
+    filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#8ab7de', endColorstr='#4d6d8d'); /* IE6 & IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#8ab7de', endColorstr='#4d6d8d')"; /* IE8 */
+    background: -webkit-gradient(linear, left top, left bottom, from(#8ab7de), to(#4d6d8d)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #8ab7de,  #4d6d8d); /* for firefox 3.6+ */
+
+}
+
+.tab{
+    border-right: 1px solid #000000;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-size: 11px;
+    line-height: 35px;
+    padding: 0 40px;
+    text-decoration: none;
+    background-color: #595553; /* for non-css3 browsers */
+    filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#595553', endColorstr='#6e6a69'); /* IE6 & IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#595553', endColorstr='#6e6a69')"; /* IE8 */
+    background: -webkit-gradient(linear, left top, left bottom, from(#595553), to(#6e6a69)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #595553,  #6e6a69); /* for firefox 3.6+ */
+
+}
+
+.tab:hover {
+    background: -moz-linear-gradient(top,  #4D4B49,  #4D4B49);
+    filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4D4B49', endColorstr='#4D4B49'); /* IE6 & IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4D4B49', endColorstr='#4D4B49')"; /* IE8 */
+    background: -webkit-gradient(linear, left top, left bottom, from(#4D4B49), to(#4D4B49)); /* for webkit browsers */
+
+}
+
+.final-tab{
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-size: 11px;
+    line-height: 35px;
+    padding: 0 77px;
+    text-decoration: none;
+    background-color: #595553; /* for non-css3 browsers */
+    filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#595553', endColorstr='#6e6a69'); /* IE6 & IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#595553', endColorstr='#6e6a69')"; /* IE8 */
+    background: -webkit-gradient(linear, left top, left bottom, from(#595553), to(#6e6a69)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #595553,  #6e6a69); /* for firefox 3.6+ */
+}
+
+/* Search Button */
+
+.games-search{
+    border-left: 1px solid #000000;
+    height: 27px;
+    padding: 4px;
+    width: 240px;
+    position: absolute;
+    left:694px;
+}
+
+.image-search{
+    position: absolute;
+    right: 25px;
+}
+
+.searchbox{
+    color: #A6A5A2;
+    height: 27px;
+    position: relative;
+    width: 170px;
+}
+
+.searchbox input{
+    background-color: #FFFFFF;
+    border-radius: 5px 5px 5px 5px;
+    border-style: solid none solid solid;
+    border-width: 1px 0 1px 1px;
+    box-shadow: 3px 0 12px #999999 inset;
+    font-size: 12px;
+    height: 15px;
+    padding: 6px 3px 6px 6px;
+    width: 170px;
+}
+
+/* End search Button */
+
+div#main{
+    background-image: url("../images/maincontent.png");
+    background-repeat: repeat-x;
+    background-color: #000000;
+    height: 1000px;
+}
+
+div#main-content{
+    height: 100%;
+    margin: 0 auto;
+    min-height: 100%;
+    padding-top: 16px;
+    width: 940px;
+    overflow:auto;
+}
+
+
+
+
+/* Main column */
+
+
+
+/* left column */
+
+div.leftcolumn{
+    float: left;
+    width: 616px;
+}
+
+div#mainslideshow{
+    margin-bottom: 7px;
+}
+
+.mainslideshow-content{
+    height: 353px;
+    overflow: hidden;
+    position: relative;
+    width: 616px;
+}
+
+.mainslideshow-scroll-area{
+    position: relative;
+}
+
+.slideshow-capsule{
+    display: block;
+    float: left;
+    margin-right: 4px;
+    position: relative;
+}
+
+img.slideshow-capsule-image{
+    height: 353px;
+    position: relative;
+    width: 616px;
+}
+
+div.price{
+    background: none repeat scroll 0 0 #000000;
+    bottom: 98px;
+    padding: 4px;
+    position: absolute;
+    right: 16px;
+    opacity: 0.8;
+}
+
+div.final-price{
+    color: #D6D7D8;
+    font-family: tahoma,helvetica,arial,trebuchet ms,sans-serif;
+}
+
+.main-overlay{
+    bottom: 0;
+    height: 86px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 616px;
+}
+
+.main-overlay .ext-overlay{
+    background-color: #000000;
+    height: 86px;
+    left: 0;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    width: 616px;
+}
+
+.main-overlay .main-overlay-content{
+    color: #FFFFFF;
+    font-size: 14px;
+    height: 70px;
+    line-height: 16px;
+    overflow: hidden;
+    padding: 8px 13px 0;
+    position: relative;
+}
+
+.main-overlay .main-overlay-platform{
+    position: absolute;
+    right: 13px;
+    top: 8px;
+}
+
+img.platform-image{
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.main-overlay h1{
+    line-height: 36px;
+    white-space: nowrap;
+}
+
+#mainslideshow-control-bar{
+    height: 13px;
+    padding-bottom: 10px;
+    padding-top: 3px;
+}
+
+div.slider{
+    background-color: #323232;
+    height: 13px;
+    position: relative;
+}
+
+div.slider-bg{
+    margin: 0;
+    padding: 0;
+}
+
+div.slider div.handle{
+    background-image: url("../images/slider.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 13px;
+    position: absolute;
+    top: 0;
+    width: 60px;
+}
+
+div.control-left{
+    left: 0;
+    background-color: #000000;
+    opacity: 0.5;
+    color: #8BB9E0;
+    cursor: pointer;
+    height: 44px;
+    position: absolute;
+    top: 16px;
+    padding-right: 16px;
+}
+
+div.control-left img{
+    vertical-align: middle;
+}
+
+div.control-right{
+    right: 0;
+    background-color: #000000;
+    opacity: 0.5;
+    color: #8BB9E0;
+    cursor: pointer;
+    height: 44px;
+    position: absolute;
+    top: 16px;
+    padding-left: 16px;
+}
+
+div.control-right img{
+    vertical-align: middle;
+}
+
+/* featured Games Css bar */
+div#featured-games{
+    background-image:url("../images/featuredbar.png");
+    position:relative;
+    background-position: center bottom;
+    background-repeat:no-repeat;
+    border-bottom: 1px solid #000000;
+}
+
+#featured-games .tab{
+    border-right: 1px solid black;
+    color: #CDCAC1;
+    cursor: pointer;
+    font-size: 11px;
+    height: 30px;
+    line-height: 28px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 12px;
+}
+
+#featured-games .tab-active{
+    background-color: #4D4B49;
+    border-top-left-radius: 16px;
+    color: #FFFFFF;
+    cursor: default;
+    margin-top: 2px;
+    padding-top: 3px;
+}
+/* End featured Games Css bar*/
+
+
+
+/* end left column */
+
+
+
+/* right column */
+div.rightcolumn{
+    float: right;
+    height: 150px;
+    width: 308px;
+    margin-left: 14px;
+}
+/* end right column */

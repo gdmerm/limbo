@@ -5,7 +5,6 @@ require_once("../controllers/TMPLPageController.php");
 require_once("../controllers/Products.php");
 require_once("../models/Product.php");
 
-
 $prodController = new Products();
 $prodController->setDBlink($db);
 
