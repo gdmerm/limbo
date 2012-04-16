@@ -1,7 +1,8 @@
 Options +FollowSymLinks
 RewriteEngine on
-RewriteRule ^.*/([^/\.]+)/?$ Pages/PageHome.php?debug=$1 [L]
-RewriteRule ^$ 								Pages/PageHome.php
+RewriteRule ^.*/([^/\.]+)/?$ pages/PageHome.php?debug=$1 [L]
+RewriteRule ^$ pages/PageHome.php
+
 #RewriteRule ^curriculum/?$ 					templates/vitae.php
 #RewriteRule ^societies-memberships/?$ 		templates/member.php
 #RewriteRule ^expertise/?$ 					templates/expertise.php

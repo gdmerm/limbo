@@ -31,46 +31,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBTableController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controllers/DBTableController.php">
+      <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="23" selection-start="977" selection-end="977" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Products.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controllers/Products.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="8" selection-start="3933" selection-end="3933" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TMPLPageController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controllers/TMPLPageController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="33" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.0">
+            <state line="1" column="35" selection-start="41" selection-end="41" vertical-scroll-proportion="-0.625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="PageHome.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Pages/PageHome.php">
+        <entry file="file://$PROJECT_DIR$/pages/PageHome.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="17" selection-start="903" selection-end="903" vertical-scroll-proportion="0.48353294">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/home.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="35" selection-start="41" selection-end="41" vertical-scroll-proportion="-0.625">
+            <state line="11" column="16" selection-start="343" selection-end="343" vertical-scroll-proportion="0.24700598">
               <folding />
             </state>
           </provider>
@@ -100,6 +73,7 @@
         <option value="$PROJECT_DIR$/Pages/PageHome.php" />
         <option value="$PROJECT_DIR$/templates/home.php" />
         <option value="$PROJECT_DIR$/Controllers/TMPLPageController.php" />
+        <option value="$PROJECT_DIR$/.htaccess" />
       </list>
     </option>
   </component>
@@ -283,14 +257,16 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="2" selection-start="316" selection-end="316" vertical-scroll-proportion="0.24700598">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/Product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="30" selection-start="530" selection-end="530" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/DBTableController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="23" selection-start="977" selection-end="977" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/home.php">
@@ -300,28 +276,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/TMPLPageController.php">
+    <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="33" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.0">
+        <state line="0" column="23" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
+    <entry file="file://$PROJECT_DIR$/pages/PageHome.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="2" selection-start="316" selection-end="316" vertical-scroll-proportion="0.24700598">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/Products.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="8" selection-start="3933" selection-end="3933" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/PageHome.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="17" selection-start="903" selection-end="903" vertical-scroll-proportion="0.48353294">
+        <state line="11" column="16" selection-start="343" selection-end="343" vertical-scroll-proportion="0.24700598">
           <folding />
         </state>
       </provider>
