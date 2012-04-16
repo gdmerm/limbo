@@ -28,11 +28,16 @@ class TMPLPageController {
     }
 
     public static function renderTemplate($data) {
-        if (isset($_GET["debug"]) && $_GET["debug"] == "data"){
+        if (isset($_GET["debug"])){
             header('Cache-Control: no-cache, must-revalidate');
             header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
             header('Content-type: application/json');
-            echo json_encode(self::$viewData);
+            if ($_GET["debug"] == "data") {
+                echo json_encode(self::$viewData);
+            } else {
+                $data = self::$viewData["data"][$_GET["debug"]];
+                echo json_encode($data);
+            }
             exit;
         }
         $viewData = $data;
