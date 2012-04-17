@@ -20,7 +20,8 @@ class Product {
         "releaseDate" => "19000101",
         "rating" => 0,
         "price" => 0.00,
-        "discountPercent" => 0
+        "discountPercent" => 0,
+        "format" => ""
     );
 
     function __construct ($productid) {

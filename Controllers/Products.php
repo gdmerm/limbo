@@ -27,7 +27,8 @@ class Products extends DBTableController {
         "releaseDate" => "19000101",
         "rating" => 0,
         "price" => 0.00,
-        "discountPercent" => 0
+        "discountPercent" => 0,
+        "format" => ""
     );
 
     function __construct() {
@@ -78,7 +79,7 @@ class Products extends DBTableController {
         if ($stmt->prepare($sql)) {
             $stmt->bind_param("s", $genre);
             $stmt->execute();
-            $stmt->bind_result($productid, $name, $studio, $publisher, $langs, $multiplayer, $description, $genre, $releaseDate, $rating, $price, $discountPercent, $vat);
+            $stmt->bind_result($productid, $name, $studio, $publisher, $langs, $multiplayer, $description, $genre, $releaseDate, $rating, $price, $discountPercent, $vat, $format);
             while ($stmt->fetch()) {
                 $results[$results_index] = array(
                     "productid" => $productid,
@@ -93,7 +94,8 @@ class Products extends DBTableController {
                     "rating" => $rating,
                     "price" => $price,
                     "discountPercent" => $discountPercent,
-                    "vat" => $vat
+                    "vat" => $vat,
+                    "format" => $format
                 );
                 $results_index++;
             }
