@@ -1,9 +1,11 @@
 <?php
-$db = new mysqli("localhost", "root", "", "limbo");
+include_once("../configuration/local.php");
 require_once("../controllers/DBTableController.php");
 require_once("../controllers/TMPLPageController.php");
 require_once("../controllers/Products.php");
 require_once("../models/Product.php");
+
+$db = new mysqli("localhost", $local["db"]["user"], $local["db"]["password"], $local["db"]["database"]);
 
 $prodController = new Products();
 $prodController->setDBlink($db);
@@ -29,17 +31,6 @@ $productFields = array(
 $productid = $prodController->save($productFields);
 $product = $prodController->getSingleById($productid);
 //echo $product->jsonize();
-*/
-
-//Select a product
-//$product = $prodController->getSingleById(2);
-//TMPLPageController::appendToView("products", array($product->getFields()));
-
-//Select by genre
-/*
-$products = $prodController->getByGenre("Adventure");
-TMPLPageController::appendToView("queryString", $_GET);
-TMPLPageController::appendToView("products", $products);
 */
 
 //Get promoted products
@@ -75,10 +66,6 @@ $featured = array(
 $featured["PC"] = $prodController->getFeatured("PC");
 $featured["MAC"] = $prodController->getFeatured("MAC");
 TMPLPageController::appendToView("featured", $featured);
-
-
-//Delete  a product
-//$prodController->delete(2);
 
 //set the view template file
 $db->close();
