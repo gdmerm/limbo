@@ -8,6 +8,9 @@ require_once("../models/Product.php");
 $prodController = new Products();
 $prodController->setDBlink($db);
 
+//append querystring to data contract
+TMPLPageController::appendToView("queryString", $_GET);
+
 //Save a Product
 /*
 $productFields = array(
@@ -30,9 +33,21 @@ $product = $prodController->getSingleById($productid);
 //TMPLPageController::appendToView("products", array($product->getFields()));
 
 //Select by genre
+/*
 $products = $prodController->getByGenre("Adventure");
 TMPLPageController::appendToView("queryString", $_GET);
 TMPLPageController::appendToView("products", $products);
+*/
+
+//Get PC Featured Products
+$featured = array(
+    "PC" => null,
+    "MAC" => null
+);
+$featured["PC"] = $prodController->getFeatured("PC");
+$featured["MAC"] = $prodController->getFeatured("MAC");
+TMPLPageController::appendToView("featured", $featured);
+
 
 //Delete  a product
 //$prodController->delete(2);
