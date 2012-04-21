@@ -14,7 +14,7 @@ class Products extends DBTableController {
         "SELECT" => "select * from products where productid=?",
         "DELETE" => "delete from products where productid=?",
         "SELECT_BY_GENRE" => "select * from products where genre=?",
-        "FEATURED_BY_FORMAT" => "select p.name, p.price from featuredProducts fp, products p where p.productid=fp.productid and fp.format=? order by fp.weight asc"
+        "FEATURED_BY_FORMAT" => "select p.productid, p.name, p.price from featuredProducts fp, products p where p.productid=fp.productid and fp.format=? order by fp.weight asc"
     );
 
     private $fields = array(
@@ -115,9 +115,10 @@ class Products extends DBTableController {
         if ($stmt->prepare($sql)) {
             $stmt->bind_param("s", $format);
             $stmt->execute();
-            $stmt->bind_result($name, $price);
+            $stmt->bind_result($productid, $name, $price);
             while ($stmt->fetch()) {
                 $results[$results_index] = array(
+                    "productid" => $productid,
                     "name" => $name,
                     "price" => $price
                 );
