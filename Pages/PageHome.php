@@ -1,5 +1,5 @@
 <?php
-$db = new mysqli("localhost", "root", "agd195", "limbo");
+$db = new mysqli("localhost", "root", "", "limbo");
 require_once("../controllers/DBTableController.php");
 require_once("../controllers/TMPLPageController.php");
 require_once("../controllers/Products.php");
