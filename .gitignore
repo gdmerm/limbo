@@ -3,3 +3,4 @@
 .idea/*
 public/.DS_Store
 public/images/.DS_Store
+configuration/local.php
