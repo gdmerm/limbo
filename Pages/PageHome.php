@@ -1,9 +1,11 @@
 <?php
-$db = new mysqli("localhost", "root", "", "limbo");
+include_once("../configuration/local.php");
 require_once("../controllers/DBTableController.php");
 require_once("../controllers/TMPLPageController.php");
 require_once("../controllers/Products.php");
 require_once("../models/Product.php");
+
+$db = new mysqli("localhost", $local["db"]["user"], $local["db"]["password"], $local["db"]["database"]);
 
 $prodController = new Products();
 $prodController->setDBlink($db);
