@@ -132,6 +132,30 @@
             </div>
             <!--End Featured Games Bar-->
 
+            <!--start Featured games main-->
+            <div class="featured-container">
+                <div class="scroll-container">
+                    <div class="scroll-window">
+                        <div class="scroll-page">
+                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/14/feat.jpg" width="184" height="69"/></a>
+                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/3/feat.jpg" width="184" height="69"/></a>
+                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/23/feat.jpg" width="184" height="69"/></a>
+                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/30/feat.jpg" width="184" height="69"/></a>
+                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/12/feat.jpg" width="184" height="69"/></a>
+                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/1/feat.jpg" width="184" height="69"</a>
+                        </div>
+                        <div class="scroll-page">
+                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/6/feat.jpg" width="184" height="69"/></a>
+                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/18/feat.jpg" width="184" height="69"/></a>
+                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/24/feat.jpg" width="184" height="69"/></a>
+                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/26/feat.jpg" width="184" height="69"</a>
+                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/29/feat.jpg" width="184" height="69"/></a>
+                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/17/feat.jpg" width="184" height="69"/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end Featured games main-->
         </div>
         <!--End Left Column DIv-->
 

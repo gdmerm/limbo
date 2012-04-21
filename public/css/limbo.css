@@ -1,4 +1,4 @@
-.clear {
+.clear{
     clear:both;
 }
 
@@ -394,7 +394,7 @@ div#featured-games{
     background-repeat:no-repeat;
     border-bottom: 1px solid #000000;
     width:616px;
-    overflow:auto;
+    overflow: auto;
 }
 
 #featured-games .tab{
@@ -433,3 +433,38 @@ div.rightcolumn{
     margin-left: 14px;
 }
 /* end right column */
+
+/* start featured games content */
+.featured-container{
+    width:616px;
+}
+
+.featured-container .scroll-container{
+    width:616px;
+    overflow: hidden;
+}
+
+.featured-container .scroll-window{
+    width:1232px;
+    height:272px;
+    position:relative;
+}
+
+.featured-container .scroll-window .scroll-page{
+    float:left;
+    width:616px;
+    height:272px;
+    overflow: auto;
+}
+
+.featured-container .scroll-window .scroll-page a{
+    display: block;
+    float: left;
+    overflow: hidden;
+    height: 106px;
+    padding: 15px 10px;
+    white-space: nowrap;
+    width:184px;
+}
+
+/*end featured games conten */
