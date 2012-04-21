@@ -52,6 +52,19 @@ $promoted = array(
 $productid = $home_config["Promoted"]["promo_1"];
 $product = $prodController->getSingleById($productid);
 $promoted["promo_1"] = $product->getFields();
+
+$productid = $home_config["Promoted"]["promo_2"];
+$product = $prodController->getSingleById($productid);
+$promoted["promo_2"] = $product->getFields();
+
+$productid = $home_config["Promoted"]["promo_3"];
+$product = $prodController->getSingleById($productid);
+$promoted["promo_3"] = $product->getFields();
+
+$productid = $home_config["Promoted"]["promo_4"];
+$product = $prodController->getSingleById($productid);
+$promoted["promo_4"] = $product->getFields();
+
 TMPLPageController::appendToView("promoted", $promoted);
 
 //Get PC Featured Products

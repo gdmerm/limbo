@@ -78,7 +78,7 @@
                                         <img border="0" class="platform-image" src="<?php echo $config["assets"] ?>/images/platformwin.png" alt="Windows" />
                                     </div>
                                     <h1>Now Available</h1>
-                                    <p>An intense and spectacular Real Time Strategy game, where realism and strategy are brought to the front lines.</p>
+                                    <p><?php echo $view->data->promoted->promo_1->description ?></p>
                                 </div>
                             </div>
                         </a>
