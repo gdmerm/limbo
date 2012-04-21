@@ -348,10 +348,6 @@ div.final-price{
     position: relative;
 }
 
-.main-overlay .main-overlay-content p{
-    text-overflow: ellipsis;
-}
-
 .main-overlay .main-overlay-platform{
     position: absolute;
     right: 13px;

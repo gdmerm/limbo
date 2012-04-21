@@ -86,9 +86,9 @@
 
                         <!--New Image 1-->
                         <a id="mainslideshow-1" class="slideshow-capsule" href="#">
-                            <img border="0" class="slideshow-capsule-image" alt="Crusader" src="<?php echo $config["assets"] ?>/images/crusader.jpg">
+                            <img border="0" class="slideshow-capsule-image" alt="Crusader" src="<?php echo $config["assets"] ?>/images/thumbs/<?php echo $view->data->promoted->promo_2->productid?>/1.jpeg">
                             <div class="price">
-                                <div class="final-price"> <strong>Buy Now</strong> : 39,99&euro;</div>
+                                <div class="final-price"> <strong>Buy Now</strong> : <?php echo $view->data->promoted->promo_2->price ?>&euro;</div>
                             </div>
                             <div class="main-overlay">
                                 <div class="ext-overlay"></div>
@@ -97,11 +97,49 @@
                                         <img border="0" class="platform-image" src="<?php echo $config["assets"] ?>/images/platformwin.png" alt="Windows" />
                                     </div>
                                     <h1>Now Available</h1>
-                                    <p>An intense and spectacular Real Time Strategy game, where realism and strategy are brought to the front lines.</p>
+                                    <p><?php echo $view->data->promoted->promo_2->description ?></p>
                                 </div>
                             </div>
                         </a>
                         <!--End Image 1-->
+
+                        <!--New Image 2-->
+                        <a id="mainslideshow-2" class="slideshow-capsule" href="#">
+                            <img border="0" class="slideshow-capsule-image" alt="Crusader" src="<?php echo $config["assets"] ?>/images/thumbs/<?php echo $view->data->promoted->promo_3->productid?>/1.jpeg">
+                            <div class="price">
+                                <div class="final-price"> <strong>Buy Now</strong> : <?php echo $view->data->promoted->promo_3->price ?>&euro;</div>
+                            </div>
+                            <div class="main-overlay">
+                                <div class="ext-overlay"></div>
+                                <div class="main-overlay-content">
+                                    <div class="main-overlay-platform">
+                                        <img border="0" class="platform-image" src="<?php echo $config["assets"] ?>/images/platformwin.png" alt="Windows" />
+                                    </div>
+                                    <h1>Now Available</h1>
+                                    <p><?php echo $view->data->promoted->promo_3->description ?></p>
+                                </div>
+                            </div>
+                        </a>
+                        <!--End Image 2-->
+
+                        <!--New Image 3-->
+                        <a id="mainslideshow-3" class="slideshow-capsule" href="#">
+                            <img border="0" class="slideshow-capsule-image" alt="Crusader" src="<?php echo $config["assets"] ?>/images/thumbs/<?php echo $view->data->promoted->promo_4->productid?>/1.jpeg">
+                            <div class="price">
+                                <div class="final-price"> <strong>Buy Now</strong> : <?php echo $view->data->promoted->promo_4->price ?>&euro;</div>
+                            </div>
+                            <div class="main-overlay">
+                                <div class="ext-overlay"></div>
+                                <div class="main-overlay-content">
+                                    <div class="main-overlay-platform">
+                                        <img border="0" class="platform-image" src="<?php echo $config["assets"] ?>/images/platformwin.png" alt="Windows" />
+                                    </div>
+                                    <h1>Now Available</h1>
+                                    <p><?php echo $view->data->promoted->promo_4->description ?></p>
+                                </div>
+                            </div>
+                        </a>
+                        <!--End Image 3-->
                     </div>
                     <div class="control-left">
                         <h5><img border="0" src="<?php echo $config["assets"] ?>/images/arrowleft.gif" alt="Left">&nbsp;&nbsp;PREV</h5>
