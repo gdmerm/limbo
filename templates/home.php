@@ -137,52 +137,20 @@
                 <div class="scroll-container">
                     <div class="scroll-window">
                         <div class="scroll-page">
-                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/14/feat.jpg" width="184" height="69"/>
-                                <h4>Assassin's Creed</h4>
-                                <h5>49,99&euro;</h5>
+                            <?php foreach ($view->data->featured->PC as $product){ ?>
+                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/<?php echo $product->productid?>/feat.jpg" width="184" height="69"/>
+                                <h4><?php echo $product->name?></h4>
+                                <h5><?php echo $product->price?>&euro;</h5>
                             </a>
-                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/3/feat.jpg" width="184" height="69"/>
-                                <h4>Crysis</h4>
-                                <h5>49,99&euro;</h5></a>
-                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/23/feat.jpg" width="184" height="69"/>
-                                <h4>Deus Ex</h4>
-                                <h5>49,99&euro;</h5></a>
-                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/30/feat.jpg" width="184" height="69"/>
-                                <h4>Skyrim</h4>
-                                <h5>49,99&euro;</h5></a>
-                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/12/feat.jpg" width="184" height="69"/>
-                                <h4>Guild Wars</h4>
-                                <h5>49,99&euro;</h5></a>
-                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/1/feat.jpg" width="184" height="69"/>
-                                <h4>Max Payne 3</h4>
-                                <h5>49,99&euro;</h5>
-                            </a>
+                            <?php } ?>
                         </div>
                         <div class="scroll-page">
-                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/2/feat.jpg" width="184" height="69"/>
-                                <h4>Call of duty: Modern Warfare 3</h4>
-                                <h5>39,99&euro;</h5>
+                            <?php foreach ($view->data->featured->MAC as $product){ ?>
+                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/<?php echo $product->productid?>/feat.jpg" width="184" height="69"/>
+                                <h4><?php echo $product->name?></h4>
+                                <h5><?php echo $product->price?>&euro;</h5>
                             </a>
-                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/14/feat.jpg" width="184" height="69"/>
-                                <h4>Assassin's Creed</h4>
-                                <h5>49,99&euro;</h5>
-                            </a>
-                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/17/feat.jpg" width="184" height="69"/>
-                                <h4>NBA 2K12</h4>
-                                <h5>39,99&euro;</h5>
-                            </a>
-                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/20/feat.jpg" width="184" height="69"/>
-                                <h4>Dungeon Defenders</h4>
-                                <h5>19,99&euro;</h5>
-                            </a>
-                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/22/feat.jpg" width="184" height="69"/>
-                                <h4>Tales of Monkey Island</h4>
-                                <h5>39,99&euro;</h5>
-                            </a>
-                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/24/feat.jpg" width="184" height="69"/>
-                                <h4>Sims 3</h4>
-                                <h5>39,99&euro;</h5>
-                            </a>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 <?php
-$db = new mysqli("localhost", "root", "agd195", "limbo");
+$db = new mysqli("localhost", "root", "", "limbo");
 require_once("../controllers/DBTableController.php");
 require_once("../controllers/TMPLPageController.php");
 require_once("../controllers/Products.php");
@@ -7,6 +7,8 @@ require_once("../models/Product.php");
 
 $prodController = new Products();
 $prodController->setDBlink($db);
+$home_config = parse_ini_file("../configuration/home.ini", 1);
+print_r($home_config);
 
 //append querystring to data contract
 TMPLPageController::appendToView("queryString", $_GET);
