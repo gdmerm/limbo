@@ -8,7 +8,8 @@ require_once("../models/Product.php");
 $prodController = new Products();
 $prodController->setDBlink($db);
 $home_config = parse_ini_file("../configuration/home.ini", 1);
-print_r($home_config);
+
+
 
 //append querystring to data contract
 TMPLPageController::appendToView("queryString", $_GET);
@@ -40,6 +41,18 @@ $products = $prodController->getByGenre("Adventure");
 TMPLPageController::appendToView("queryString", $_GET);
 TMPLPageController::appendToView("products", $products);
 */
+
+//Get promoted products
+$promoted = array(
+    "promo_1" => null,
+    "promo_2" => null,
+    "promo_3" => null,
+    "promo_4" => null
+);
+$productid = $home_config["Promoted"]["promo_1"];
+$product = $prodController->getSingleById($productid);
+$promoted["promo_1"] = $product->getFields();
+TMPLPageController::appendToView("promoted", $promoted);
 
 //Get PC Featured Products
 $featured = array(

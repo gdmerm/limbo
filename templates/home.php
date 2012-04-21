@@ -67,9 +67,9 @@
 
                         <!--New Image 0-->
                         <a id="mainslideshow-0" class="slideshow-capsule" href="#">
-                            <img border="0" class="slideshow-capsule-image" alt="Crusader" src="<?php echo $config["assets"] ?>/images/crusader.jpg">
+                            <img border="0" class="slideshow-capsule-image" alt="Crusader" src="<?php echo $config["assets"] ?>/images/thumbs/<?php echo $view->data->promoted->promo_1->productid?>/1.jpeg">
                             <div class="price">
-                                <div class="final-price"> <strong>Buy Now</strong> : 39,99&euro;</div>
+                                <div class="final-price"> <strong>Buy Now</strong> : <?php echo $view->data->promoted->promo_1->price ?>&euro;</div>
                             </div>
                             <div class="main-overlay">
                                 <div class="ext-overlay"></div>
