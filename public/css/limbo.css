@@ -509,3 +509,60 @@ div.rightcolumn{
 
 }
 /*end featured games content */
+
+/*start offers-releases*/
+div#releases-offers{
+    background-image: url("../images/featuredbar.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #000000;
+    overflow: auto;
+    position: relative;
+    width: 616px;
+}
+
+#releases-offers .tab-active {
+    background-color: #4D4B49;
+    border-top-left-radius: 16px;
+    color: #FFFFFF;
+    cursor: default;
+    margin-top: 2px;
+    padding-top: 3px;
+}
+
+#releases-offers .tab{
+    border-right: 1px solid black;
+    color: #CDCAC1;
+    cursor: pointer;
+    font-size: 11px;
+    height: 30px;
+    line-height: 28px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 12px;
+}
+
+.releases-container .tab-page{
+    background-color: #1A1A1A;
+    border: 1px solid #4D4B49;
+    overflow: hidden;
+    position: relative;
+}
+
+.tab-row{
+    border-bottom: 1px solid #000000;
+    height: 77px;
+    position: relative;
+}
+
+.tab-games-image {
+    left: 16px;
+    position: absolute;
+    top: 16px;
+}
+
+tiny-cap-image {
+    height: 45px;
+    width: 120px;
+}
+/*end offers-releases*/

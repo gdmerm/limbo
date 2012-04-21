@@ -194,9 +194,28 @@
                 </div>
             </div>
             <!--end Featured games main-->
-            <div class="featured-footer">
 
+            <!--Start New releases - offers-->
+            <div id="releases-offers">
+                <div class="tab-active">New Releases</div>
+                <div class="tab">Special Offers</div>
             </div>
+
+            <div class="releases-container">
+                <div class="tab-page">
+                    <div id="released-games">
+                        <div id="released-games-1" class="tab-row">
+                            <div class="tab-games-image">
+                                <img class="tiny-cap-image" src="<?php echo $config["assets"] ?>/images/thumbs/1/tiny.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--End New releases - offers-->
+
+
         </div>
         <!--End Left Column DIv-->
 
