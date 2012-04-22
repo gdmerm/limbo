@@ -1,11 +1,27 @@
 <?php
+session_start();
 include_once("../configuration/local.php");
 require_once("../controllers/DBTableController.php");
+require_once("../controllers/LoginController.php");
 require_once("../controllers/TMPLPageController.php");
 require_once("../controllers/Products.php");
 require_once("../models/Product.php");
 
 $db = new mysqli("localhost", $local["db"]["user"], $local["db"]["password"], $local["db"]["database"]);
+
+session_destroy();
+$login = new LoginController();
+$login->setDblink($db);
+if ($login->checkLogin("gdmerm@gmail.com", "agd195")) {
+    $login->loginUser();
+}
+
+if (!isset($_SESSION["auth_valid"]) || $_SESSION["auth_valid"] != true ) {
+    echo "you are not logged in!";
+    exit;
+}
+
+
 
 $prodController = new Products();
 $prodController->setDBlink($db);
