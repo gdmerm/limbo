@@ -13,20 +13,15 @@ session_destroy();
 $login = new LoginController();
 $login->setDblink($db);
 if ($login->checkLogin("gdmerm@gmail.com", "agd195")) {
-    $login->loginUser();
+    $login->setUserAsLoggedIn();
 }
 
-if (!isset($_SESSION["auth_valid"]) || $_SESSION["auth_valid"] != true ) {
-    echo "you are not logged in!";
-    exit;
-}
-
+LoginController::securePage();
 
 
 $prodController = new Products();
 $prodController->setDBlink($db);
 $home_config = parse_ini_file("../configuration/home.ini", 1);
-
 
 
 //append querystring to data contract

@@ -21,7 +21,7 @@ class LoginController {
         return $success;
     }
 
-    public function loginUser() {
+    public function setUserAsLoggedIn() {
         $_SESSION["auth_valid"] = true;
     }
 
@@ -31,6 +31,13 @@ class LoginController {
 
     public function setDblink($dblink) {
         $this->dblink = $dblink;
+    }
+
+    public static function  securePage() {
+        if (!isset($_SESSION["auth_valid"]) || $_SESSION["auth_valid"] != true ) {
+            echo "you are not logged in!";
+            exit;
+        }
     }
 
 
