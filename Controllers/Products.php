@@ -13,7 +13,8 @@ class Products extends DBTableController {
         "UPDATE" => "update products set `name`=?, `studio`=?, `publisher`=?, `languages`=?, `multiplayer`=?, `description`=?, `genre`=?, `releaseDate`=?, `rating`=?, `price`=?, `discountPercent`=? where `productid`=?",
         "SELECT" => "select * from products where productid=?",
         "DELETE" => "delete from products where productid=?",
-        "SELECT_BY_GENRE" => "select * from products where genre=?"
+        "SELECT_BY_GENRE" => "select * from products where genre=?",
+        "FEATURED_BY_FORMAT" => "select p.productid, p.name, p.price from featuredProducts fp, products p where p.productid=fp.productid and fp.format=? order by fp.weight asc"
     );
 
     private $fields = array(
@@ -103,6 +104,29 @@ class Products extends DBTableController {
         $stmt->close();
         return $results;
         //return $this->arrayGroupBy($results, "genre");
+    }
+
+    public function getFeatured($format) {
+        $db = $this->getDBlink();
+        $sql = $this->sqlStatements["FEATURED_BY_FORMAT"];
+        $stmt = $db->stmt_init();
+        $results = array();
+        $results_index = 0;
+        if ($stmt->prepare($sql)) {
+            $stmt->bind_param("s", $format);
+            $stmt->execute();
+            $stmt->bind_result($productid, $name, $price);
+            while ($stmt->fetch()) {
+                $results[$results_index] = array(
+                    "productid" => $productid,
+                    "name" => $name,
+                    "price" => $price
+                );
+                $results_index++;
+            }
+        }
+        $stmt->close();
+        return $results;
     }
 
     public function delete($productid) {
