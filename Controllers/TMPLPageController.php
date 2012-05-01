@@ -41,7 +41,7 @@ class TMPLPageController {
             exit;
         }
         $viewData = $data;
-        $templatePath = "../templates/" . self::getTemplateFile();
+        $templatePath = self::getTemplateFile();
         include($templatePath);
     }
 }
