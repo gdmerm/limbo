@@ -76,12 +76,7 @@ class PageHome extends LMBPageController {
 
 		//set the view template file
 		$db->close();
-		TMPLPageController::setTemplateFile("../templates/home.php");
-		//get a copy of the view data
-		$viewData = TMPLPageController::$viewData;
-		$viewData = json_encode($viewData);
-		//finally render our template
-		TMPLPageController::renderTemplate($viewData);
+		TMPLPageController::setTemplateFile("templates/home.php");
 	}
 
 }

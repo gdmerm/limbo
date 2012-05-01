@@ -15,6 +15,10 @@ class TMPLPageController {
         return self::$viewData;
     }
 
+	public function getJSONViewData() {
+		return json_encode(self::$viewData);
+	}
+
     public static function appendToView($key, $collection) {
         self::$viewData["data"][$key] = $collection;
     }
@@ -27,7 +31,7 @@ class TMPLPageController {
         return self::$templateFile;
     }
 
-    public static function renderTemplate($data) {
+    public static function renderTemplate() {
         if (isset($_GET["debug"])){
             header('Cache-Control: no-cache, must-revalidate');
             header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
@@ -40,7 +44,7 @@ class TMPLPageController {
             }
             exit;
         }
-        $viewData = $data;
+        $viewData = json_encode(self::$viewData);
         $templatePath = self::getTemplateFile();
         include($templatePath);
     }
