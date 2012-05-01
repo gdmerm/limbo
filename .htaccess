@@ -1,14 +1,11 @@
 Options +FollowSymLinks
 RewriteEngine on
-#RewriteRule ^.*/([^/\.]+)/?$ pages/PageHome.php?debug=$1 [L]
-RewriteRule ^$ pages/PageHome.php
+#RewriteRule ^$ index.php
+#RewriteRule ^*/([^/\.]+)/([^/\.]+)/?$ index.php?c=$1&a=$2 [L]
 
-#RewriteRule ^curriculum/?$ 				templates/vitae.php
-#RewriteRule ^societies-memberships/?$ 		templates/member.php
-#RewriteRule ^expertise/?$ 					templates/expertise.php
-#RewriteRule ^clinical-experience/?$ 		templates/experience.php
-#RewriteRule ^patients-brief/?$ 			templates/persomed.php
-#RewriteRule ^patients-brief/download/?$ 	templates/persomed-download.php
-#RewriteRule ^contact/?$ 					templates/contact.php
-#RewriteRule ^gallery/?$ 					templates/photo.php
-#RewriteRule ^links/?$ 						templates/links.php
+RewriteRule ^([^/\.]+)/([^/\.]+) index.php?c=$1&a=$2&%{QUERY_STRING} [L]
+
+
+
+
+
