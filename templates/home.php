@@ -1,4 +1,4 @@
-<?php include("../configuration/config.php"); ?>
+<?php include("configuration/config.php"); ?>
 <?php $view = json_decode($viewData); ?>
 
 <!DOCTYPE html>
