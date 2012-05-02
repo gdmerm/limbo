@@ -11,7 +11,7 @@ require_once("models/Product.php");
 
 //print_r($_GET);
 //exit;
-$controllerId = $_GET["c"];
+$controllerId = strtolower($_GET["c"]);
 $action = $_GET["a"];
 
 //sanitize querystring here
@@ -19,8 +19,10 @@ $action = $_GET["a"];
 //spawn dispatchers
 Limbo::prepareDatabaseLink($local);
 
-$pageConfiguration = parse_ini_file("configuration/home.ini", 1);
-Limbo::setConfiguration($pageConfiguration);
+if ($controllerId == "pagehome") {
+	$pageConfiguration = parse_ini_file("configuration/home.ini", 1);
+	Limbo::setConfiguration($pageConfiguration);
+}
 require_once("pages/" . $controllerId . ".php");
 Limbo::dispatch($controllerId, $action);
 TMPLPageController::renderTemplate();

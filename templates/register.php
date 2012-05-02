@@ -1,12 +1,12 @@
-<?php include("../configuration/config.php"); ?>
+<?php include("configuration/config.php"); ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
         "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
 <head>
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="<?php echo $config["assets"] ?>/css/register.css"/>
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="<?php echo $config["assets"] ?>/css/register.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo $config["assets"] ?>/css/limbo.css"/>
 </head>
 
