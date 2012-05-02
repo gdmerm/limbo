@@ -178,6 +178,23 @@
             <a class="google-plus" href="#"><img src="<?php echo $config["assets"] ?>/images/googleplus.png"/></a>
             <a class="email" href="#"><img src="<?php echo $config["assets"] ?>/images/email.png"/></a>
         </div>
+        <div class="wrap">
+            <ul class="promo">
+                <li class="promo-type-stories">
+                    <em>Top Stories:</em>
+                    <ul>
+                        <li>
+                            <a target="_blank" href="http://www.eurogamer.net/articles/2012-04-23-guild-wars-2-the-inside-stories">Guild Wars 2: The Inside Stories</a>
+                            <img src="<?php echo $config["assets"] ?>/images/guildwars2.png">
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://www.eurogamer.net/videos/call-of-duty-black-ops-2-reveal-trailer">Call of duty: Black Ops 2</a>
+                            <img src="<?php echo $config["assets"] ?>/images/guildwars2.png">
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 <!--End Footer-->

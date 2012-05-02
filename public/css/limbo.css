@@ -251,7 +251,7 @@ div#main{
     background-image: url("../images/maincontent.png");
     background-repeat: repeat-x;
     background-color: #000000;
-    height: 1000px;
+    height: auto;
 }
 
 div#main-content{

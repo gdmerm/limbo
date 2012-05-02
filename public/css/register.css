@@ -222,4 +222,48 @@ body {
 .social .email{
     padding-bottom: 1px;
 }
+
+.promo{
+    padding: 0 20px 0 20px;
+    width: 700px;
+    height:185px;
+}
+
+.promo-type-stories{
+    float: left;
+    height: 212px;
+    margin: 0;
+    padding: 0 0 0 10px;
+}
+
+#footer ul.promo em{
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 36px;
+}
+
+#footer .prommo ul{
+    height: auto;
+    line-height: 17px;
+    margin: 0;
+    padding: 0;
+}
+
+#footer .promo ul li{
+    height: auto;
+    line-height: 17px;
+    margin: 0;
+    padding: 0;
+}
+
+#footer .promo-type-stories a{
+   color: #FFEA3B;
+   text-decoration: none;
+   float: right;
+   padding-left: 10px;
+   font-size: 12px;
+   display: block;
+}
+
 /*End Footer */
