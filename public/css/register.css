@@ -64,6 +64,7 @@ body {
 .left-column{
     float:left;
     width:616px;
+    margin-bottom: 16px;
 }
 
 .register-box{
@@ -194,76 +195,67 @@ body {
 }
 
  /* Footer */
-
 #footer {
-    background-color: #000000;
-    clear: both;
-    padding-bottom: 60px;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 30px;
+    background-image: url("../images/footer.png");
+    background-repeat: repeat-x;
+    border-top: 1px solid #545454;
+    color: white;
+    float: left;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+#footer ul{
+    width:980px;
+    margin:0 auto;
 }
 
-.footer-content {
+#footer ul li {
+    clear: none;
+    float: left;
+    margin: 10px 0 0;
+    padding: 0 30px;
+}
+
+#footer ul li.links a {
+    clear: none;
+    display: block;
+    float: left;
+    margin: 10px 7px;
+    font-size: 14px;
+    color: #4D6D8D;
+    text-decoration: none;
+}
+
+#footer ul li.links a:hover{
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#footer ul li a img{
+    margin-right:12px;
+}
+
+
+#footer ul li a img.twitter{
+    vertical-align: middle;
+}
+
+#footer ul li a img.facebook{
+    vertical-align: middle;
+}
+
+#footer ul li a img.google{
+    vertical-align: middle;
+}
+
+#footer ul li.trademark {
     color: #B0AEAC;
     font-size: 11px;
-    padding-top: 12px;
-    width: 940px;
-    border: 1px solid #3C3D3E;
-    margin: 0 auto;
-    height:250px;
 }
 
-.social {
-    float:right;
-    padding-right: 10px;
-}
-
-.social .email{
-    padding-bottom: 1px;
-}
-
-.promo{
-    padding: 0 20px 0 20px;
-    width: 700px;
-    height:185px;
-}
-
-.promo-type-stories{
-    float: left;
-    height: 212px;
-    margin: 0;
-    padding: 0 0 0 10px;
-}
-
-#footer ul.promo em{
-    color: #FFFFFF;
-    font-size: 12px;
-    font-weight: bold;
-    line-height: 36px;
-}
-
-#footer .prommo ul{
-    height: auto;
-    line-height: 17px;
-    margin: 0;
-    padding: 0;
-}
-
-#footer .promo ul li{
-    height: auto;
-    line-height: 17px;
-    margin: 0;
-    padding: 0;
-}
-
-#footer .promo-type-stories a{
-   color: #FFEA3B;
-   text-decoration: none;
-   float: right;
-   padding-left: 10px;
-   font-size: 12px;
-   display: block;
-}
 
 /*End Footer */

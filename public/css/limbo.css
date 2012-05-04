@@ -170,6 +170,10 @@ div.content {
 
 }
 
+.tab-active:hover{
+    text-decoration: none;
+}
+
 .tab{
     border-right: 1px solid #000000;
     color: #FFFFFF;
@@ -192,6 +196,7 @@ div.content {
     filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4D4B49', endColorstr='#4D4B49'); /* IE6 & IE7 */
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4D4B49', endColorstr='#4D4B49')"; /* IE8 */
     background: -webkit-gradient(linear, left top, left bottom, from(#4D4B49), to(#4D4B49)); /* for webkit browsers */
+    text-decoration: none;
 
 }
 
@@ -275,6 +280,7 @@ div#main-content{
 div.leftcolumn{
     float: left;
     width: 616px;
+    margin-bottom: 16px;
 }
 
 div#mainslideshow{
@@ -466,10 +472,135 @@ div#featured-games{
 /* right column */
 div.rightcolumn{
     float: right;
-    height: 150px;
+    height: auto;
     width: 308px;
     margin-left: 14px;
 }
+
+.rightcolumn .topblock{
+    background-color: #292F35;
+    background-image: url("../images/right_blue.png");
+    background-repeat: no-repeat;
+    width: 308px;
+    height: 25px;
+
+}
+
+.rightcolumn .gamenewsblock{
+    background-position: right bottom;
+    border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #262626;
+    border-style: none none none solid;
+    border-width: medium medium medium 1px;
+    background-color: #262626;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.rightcolumn .gamenewsblock .gamenews-img {
+    padding-left:16px;
+}
+
+.rightcolumn .gamenewsblock .gamenews-content a {
+    color: #FDB913;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.rightcolumn .gamenewsblock .gamenews-content ul{
+    padding-left: 10px;
+}
+
+.rightcolumn .gamenewsblock .gamenews-content li{
+    list-style-type: square;
+    padding-top: 10px;
+}
+
+.rightcolumn .topblock .gamenews{
+    font-size:12px;
+    font-weight: bold;
+    padding-left:16px;
+    padding-top: 5px;
+    margin-bottom: 25px;
+}
+
+.rightcolumn .gamenewsblock{
+    background-position: right bottom;
+    border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #262626;
+    border-style: none none none solid;
+    border-width: medium medium medium 1px;
+    background-color: #262626;
+    padding: 16px;
+
+}
+
+.rightcolumn .topblock .offers{
+    font-size:12px;
+    font-weight: bold;
+    padding-left:16px;
+    padding-top: 5px;
+}
+
+.rightcolumn .mainblock{
+    background-position: right bottom;
+    border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #262626;
+    border-style: none none none solid;
+    border-width: medium medium medium 1px;
+    background-color: #262626;
+    padding: 16px;
+
+}
+
+.rightcolumn .mainblock .imageblock{
+    display: block;
+    height: 45px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.rightcolumn .mainblock .imageblock .tinyimg{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.rightcolumn .mainblock .imageblock .tinyimg2{
+    position: absolute;
+    right:10px;
+    top: 0;
+}
+
+.rightcolumn .mainblock .imageblock .tinyimg img{
+    width:120px;
+    height: 45px;
+}
+
+.offerinfo p{
+    font-weight: bold;
+    font-size: 12px;
+    color: #B0AEAC;
+}
+
+.rightcolumn .mainblock .btn-addtocart{
+   padding-top: 15px;
+   float: right;
+}
+
+.rightcolumn .mainblock .btn-addtocart a{
+    background-image: url("http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_repeat.gif");
+    background-repeat: repeat-x;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 11px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 11px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 3px 1px 5px #888;
+
+}
+
 /* end right column */
 
 /* start featured games content */
@@ -549,10 +680,12 @@ div#releases-offers{
     position: relative;
 }
 
-.tab-row{
+
+#released-games-1.tab-row{
     border-bottom: 1px solid #000000;
     height: 77px;
     position: relative;
+    background-color: #1F1F1F;
 }
 
 .tab-games-image {
@@ -565,4 +698,69 @@ tiny-cap-image {
     height: 45px;
     width: 120px;
 }
+
+.tab-games-desc{
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 16px;
+    left: 152px;
+    overflow: hidden;
+    top: 18px;
+    width: 400px;
+}
+
+.tab-games-desc .genre-release{
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 12px;
+    color:#626366;
+}
+
+.tab-games-discper{
+    color: #FFFFFF;
+    font-size: 14px;
+    height: 19px;
+    line-height: 19px;
+    position: absolute;
+    right: 90px;
+    text-align: center;
+    top: 30px;
+    width: 46px;
+    background-color: #7B3445;
+}
+
+.tab-price{
+    color: #B0AEAC;
+    font-family: tahoma,helvetica,arial,trebuchet ms,sans-serif;
+    font-size: 11px;
+    position: absolute;
+    right: 16px;
+    top: 22px;
+}
+
+#released-games-2.tab-row{
+    border-bottom: 1px solid #000000;
+    height: 77px;
+    position: relative;
+    background-color: #1A1A1A;
+}
+
+#released-games-3.tab-row{
+    border-bottom: 1px solid #000000;
+    height: 77px;
+    position: relative;
+    background-color: #1F1F1F;
+}
+
+#released-games-4.tab-row{
+    border-bottom: 1px solid #000000;
+    height: 77px;
+    position: relative;
+    background-color: #1A1A1A;
+}
+
+
 /*end offers-releases*/
+
+/* right column main body */
+

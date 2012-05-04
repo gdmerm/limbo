@@ -159,8 +159,9 @@
             </div>
             <div class="join-limbo-content">
                 <ul id="reasons">
-                    <li>Buy and dowload full games</li>
-                    <ll>Kai polla alla</ll>
+                    <li>Buy and dowload full games!</li>
+                    <li>Get Exclusive offers everyday!</li>
+                    <ll>Choose from a huge list of games!</ll>
                 </ul>
             </div>
         </div>
@@ -171,31 +172,20 @@
 
 <!--Footer-->
 <div id="footer">
-    <div class="footer-content">
-        <div class="social">
-            <a class="facebook" href="#"><img src="<?php echo $config["assets"] ?>/images/facebook.png"/></a>
-            <a class="twitter" href="#"><img src="<?php echo $config["assets"] ?>/images/twitter.png"/></a>
-            <a class="google-plus" href="#"><img src="<?php echo $config["assets"] ?>/images/googleplus.png"/></a>
-            <a class="email" href="#"><img src="<?php echo $config["assets"] ?>/images/email.png"/></a>
-        </div>
-        <div class="wrap">
-            <ul class="promo">
-                <li class="promo-type-stories">
-                    <em>Top Stories:</em>
-                    <ul>
-                        <li>
-                            <a target="_blank" href="http://www.eurogamer.net/articles/2012-04-23-guild-wars-2-the-inside-stories">Guild Wars 2: The Inside Stories</a>
-                            <img src="<?php echo $config["assets"] ?>/images/guildwars2.png">
-                        </li>
-                        <li>
-                            <a target="_blank" href="http://www.eurogamer.net/videos/call-of-duty-black-ops-2-reveal-trailer">Call of duty: Black Ops 2</a>
-                            <img src="<?php echo $config["assets"] ?>/images/guildwars2.png">
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
+    <ul>
+        <li class="links">
+            <a href="#" target="_blank">Store</a>
+            <a href="#" target="_blank">News</a>
+            <a href="#" target="_blank">About</a>
+            <a href="#" target="_blank">Support</a>
+        </li>
+        <li class="social">
+            <a href="http://www.facebook.com" target="_blank"><img class="facebook" src="<?php echo $config["assets"] ?>/images/facebook.png"</a>
+            <a href="http://www.twitter.com" target="_blank"><img class="twitter" src="<?php echo $config["assets"] ?>/images/twitter.png"</a>
+            <a href="http://www.plus.google.com" target="_blank"><img class="google" src="<?php echo $config["assets"] ?>/images/googleplus.png"</a>
+        </li>
+        <li class="trademark">&copy; 2012 Limbo Corporation. All rights reserved. All trademarks are property of their respective owners</li>
+    </ul>
 </div>
 <!--End Footer-->
 
