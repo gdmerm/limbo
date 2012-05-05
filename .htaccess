@@ -4,7 +4,7 @@ RewriteEngine on
 #RewriteRule ^*/([^/\.]+)/([^/\.]+)/?$ index.php?c=$1&a=$2 [L]
 
 RewriteRule ^(public|templates)($|/) - [L]
-RewriteRule ^\/?$ index.php?c=pagehome&a=view
+RewriteRule ^\/?$ index.php?c=pagehome&a=view&%{QUERY_STRING} [L]
 RewriteRule ^([^/\.]+)\/?$ index.php?c=$1&a=$view&%{QUERY_STRING} [L]
 RewriteRule ^([^/\.]+)/([^/\.]+) index.php?c=$1&a=$2&%{QUERY_STRING} [L]
 

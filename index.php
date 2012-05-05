@@ -11,8 +11,6 @@ require_once("models/Product.php");
 require_once("controllers/UsersController.php");
 require_once("models/User.php");
 
-//print_r($_GET);
-//exit;
 $controllerId = strtolower($_GET["c"]);
 $action = $_GET["a"];
 

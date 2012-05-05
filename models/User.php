@@ -10,6 +10,9 @@ class User
 {
 	private $uid;
 
+	static public $isGuest = true;
+	static public $membership = null;
+
 	private $fields = array(
 		'email' => '',
 		'firstName' => '',
