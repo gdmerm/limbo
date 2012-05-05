@@ -290,7 +290,7 @@
             </div>
 
         </div>
-        <!--End RIght Column Div-->
+        <!--End Right Column Div-->
     </div>
 </div>
 <!--End Main-->
