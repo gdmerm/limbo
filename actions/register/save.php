@@ -23,8 +23,15 @@ class Register extends LMBPageController
 				"password" => $_POST["password"],
 				"secret" => $_POST["secret"]
 			);
-			$userController->save($userFields);
-			header('Location: /limbo/register/');
+			$uid = $userController->save($userFields);
+
+			//before redirecting to home, we must set the user as logged in!
+			$login = new LoginController();
+			$login->setDblink($db);
+			$login->setUserAsLoggedIn($uid);
+
+			//now redirect to home
+			header('Location: /limbo');
 		}
 	}
 }

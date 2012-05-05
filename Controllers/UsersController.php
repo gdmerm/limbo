@@ -34,7 +34,6 @@ class UsersController extends DBTableController
 
 	public function save($model)
 	{
-		// TODO: Implement save() method.
 		$this->setFields($model);
 		$db = $this->getDBlink();
 		$sql = $this->sqlStatements["INSERT"];
@@ -46,9 +45,21 @@ class UsersController extends DBTableController
 		return $db->insert_id;
 	}
 
-	public function getSingleById($modelID)
-	{
-		// TODO: Implement getSingleById() method.
+	public function getSingleById($uid) {
+		$db = $this->getDBlink();
+		$sql = $this->sqlStatements["SELECT"];
+		$stmt = $db->stmt_init();
+		if ($stmt->prepare($sql)){
+			$stmt->bind_param("i", $uid);
+			$stmt->execute();
+			$result = $stmt->get_result();
+			$this->setContract($result->fetch_assoc());
+		}
+		//return $this->getContract();
+		$user = new User($uid);
+		$user->setFields($this->getContract());
+		$stmt->close();
+		return $user;
 	}
 
 	public function delete($modelID)

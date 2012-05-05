@@ -4,21 +4,23 @@ class PageHome extends LMBPageController {
 
 	public function initialize() {
 		$db = Limbo::getDb();
+
+		/*
 		session_destroy();
 		$login = new LoginController();
 		$login->setDblink($db);
 		if ($login->checkLogin("gdmerm@gmail.com", "agd195")) {
 			$login->setUserAsLoggedIn();
 		}
+		*/
 
 		//Protect this page by requiring login
-		LoginController::securePage();
-
+		//LoginController::securePage();
+		LoginController::getUserInfo();
 
 		$prodController = new Products();
 		$prodController->setDBlink($db);
 		$home_config = Limbo::getConfiguration();
-
 
 		//append querystring to data contract
 		TMPLPageController::appendToView("queryString", $_GET);
@@ -73,6 +75,13 @@ class PageHome extends LMBPageController {
 		$featured["PC"] = $prodController->getFeatured("PC");
 		$featured["MAC"] = $prodController->getFeatured("MAC");
 		TMPLPageController::appendToView("featured", $featured);
+
+		//append member info if any
+		if (!User::$isGuest) {
+			TMPLPageController::appendToView("member", User::$membership);
+		} else {
+			TMPLPageController::appendToView("member", null);
+		}
 
 		//set the view template file
 		$db->close();

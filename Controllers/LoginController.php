@@ -21,8 +21,9 @@ class LoginController {
         return $success;
     }
 
-    public function setUserAsLoggedIn() {
+    public function setUserAsLoggedIn($uid) {
         $_SESSION["auth_valid"] = true;
+		$_SESSION["auth_user_id"] = $uid;
     }
 
     public function getDblink() {
@@ -39,6 +40,17 @@ class LoginController {
             exit;
         }
     }
+
+	public static function getUserInfo() {
+		if (isset($_SESSION["auth_valid"]) && $_SESSION["auth_valid"] === true ) {
+			$uid = $_SESSION["auth_user_id"];
+			$userController = new UsersController();
+			$userController->setDBlink(Limbo::getDb());
+			$user = $userController->getSingleById($uid);
+			User::$isGuest = false;
+			User::$membership = $user->getFields();;
+		}
+	}
 
 
 }
