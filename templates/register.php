@@ -1,58 +1,11 @@
 <?php include("configuration/config.php"); ?>
+<?php $view = json_decode($viewData); ?>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<?php include("common/header.php") ?>
 
-<head>
-    <title>Register</title>
-    <link rel="stylesheet" type="text/css" href="<?php echo $config["assets"] ?>/css/register.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo $config["assets"] ?>/css/limbo.css"/>
-</head>
+<?php include("common/naviMenu.php") ?>
 
-<body>
 
-<!--Start Global Header-->
-<div id="global-header">
-    <div class="content">
-        <div class="logo">
-            <a href="#"><img border="0" src="<?php echo $config["assets"] ?>/images/logo.jpg" alt="LIMBO"></a>
-        </div>
-        <a href="#" class="header-item-active">STORE</a>
-        <a href="#" class="header-item">NEWS</a>
-        <a href="#" class="header-item">ABOUT</a>
-        <a href="#" class="header-item">SUPPORT</a>
-        <div class="global-actions">
-            <a class="register" href="#">SIGN UP FOR FREE</a> | <a class="register" href="#">Sign in</a>
-        </div>
-    </div>
-</div>
-<!--End global Header-->
-
-<!--Start Games Menu-->
-<div id="games-header">
-    <div class="content">
-        <div class="games-navigation-area">
-            <div class="games-navigation">
-                <a class="tab-active" href="#">FEATURED GAMES</a>
-                <a class="tab" href="#">GENRES</a>
-                <a class="tab" href="#">MAC</a>
-                <a class="tab" href="#">VIDEOS</a>
-                <a class="final-tab" href="#">&nbsp;</a>
-                <div class="games-search">
-                    <a href="#"><img border="0" class="image-search" src="<?php echo $config["assets"] ?>/images/search.png" alt="search"></a>
-                    <form class="searchform" action="#" name="searchform">
-                        <div class="searchbox">
-                            <input type="text" value="Search for games">
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Games Menu-->
 <div id="main">
     <div id="main-content">
         <div class="main-title">
@@ -170,25 +123,4 @@
     </div>
 </div>
 
-<!--Footer-->
-<div id="footer">
-    <ul>
-        <li class="links">
-            <a href="#" target="_blank">Store</a>
-            <a href="#" target="_blank">News</a>
-            <a href="#" target="_blank">About</a>
-            <a href="#" target="_blank">Support</a>
-        </li>
-        <li class="social">
-            <a href="http://www.facebook.com" target="_blank"><img class="facebook" src="<?php echo $config["assets"] ?>/images/facebook.png"</a>
-            <a href="http://www.twitter.com" target="_blank"><img class="twitter" src="<?php echo $config["assets"] ?>/images/twitter.png"</a>
-            <a href="http://www.plus.google.com" target="_blank"><img class="google" src="<?php echo $config["assets"] ?>/images/googleplus.png"</a>
-        </li>
-        <li class="trademark">&copy; 2012 Limbo Corporation. All rights reserved. All trademarks are property of their respective owners</li>
-    </ul>
-</div>
-<!--End Footer-->
-
-</body>
-
-</html>
+<?php include("common/footer.php") ?>
