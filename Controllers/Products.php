@@ -36,11 +36,11 @@ class Products extends DBTableController {
         $this->setDBTable("products");
     }
 
-    private function setFields($fields) {
-        foreach ($fields as $key => $value) {
-            $this->fields[$key] = $value;
-        }
-    }
+	public function setFields($fields) {
+		foreach ($fields as $key => $value) {
+			$this->fields[$key] = $value;
+		}
+	}
 
     public function save($fields) {
         $this->setFields($fields);

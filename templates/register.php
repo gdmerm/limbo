@@ -20,11 +20,13 @@
             <div class="register-box">
                 <div class="join-form">
 
+					<form method="POST" action="/limbo/register/save">
+
                     <!--Username-->
                     <div class="form-row">
                         <div class="form-area">
                             <label for="accountname">Create a Limbo Username</label>
-                            <input type="text" id="accountname" name="accountname" maxlength="64">
+                            <input type="text" id="accountname" name="firstName" maxlength="64">
                         </div>
                         <div class="form-notes">
                             <br>
@@ -79,7 +81,7 @@
                             <label for="question">Question</label>
                             <br>
                             <label for="secret_answer">Secret answer</label>
-                            <input type="text" id="secret_answer" name="secret_answer" maxlength="255">
+                            <input type="text" id="secret_answer" name="secret" maxlength="255">
                         </div>
 
                         <div class="form-notes">
@@ -100,6 +102,7 @@
                         <div class="create-account">Create my account</div>
                     </a>
                         <div class="clear"></div>
+					</form>
                 </div>
             </div>
         </div>
@@ -124,3 +127,12 @@
 </div>
 
 <?php include("common/footer.php") ?>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		$(".create-account").on("click", function (e) {
+			e.preventDefault();
+			$(this).parent().parent().submit();
+		})
+	});
+</script>
