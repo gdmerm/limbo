@@ -34,6 +34,74 @@ a:active{outline:0;}
 #tagCloudContainer{margin-top:20px;}
 *{outline:none;}
 
+aside {
+    float:right !important;
+}
+
+.clearfix {
+    overflow:auto;
+}
+
+.boxmodelfix {
+    box-sizing: border-box;
+}
+
+.inline-block {
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+}
+
+button {
+    padding:10px 20px;
+    color:#ffffff;
+    font-size:14px;
+    background-color:#FDB913;
+    display:block;
+    background:none;
+    outline: none;
+}
+
+.span-1 {
+    width:60px;
+}
+.span-2 {
+    width:120px;
+}
+.span-3 {
+    width:180px;
+}
+
+.span-4 {
+    width:240px;
+}
+
+.span-5 {
+    width:300px;
+}
+
+.span-6 {
+    width:360px;
+}
+
+.span-7 {
+    width:420px;
+}
+
+.span-8 {
+    width:480px;
+}
+
+.span-9 {
+    width:540px;
+}
+
+.span-10 {
+    width:600px;
+}
+
+.span-1,.span-2,.span-3,.span-4,.span-5,.span-6,.span-7,.span-8,.span-9,.span-10 {float:left}
+
 
 //start limbo main css
 .clear{
@@ -758,9 +826,86 @@ tiny-cap-image {
     position: relative;
     background-color: #1A1A1A;
 }
-
-
 /*end offers-releases*/
 
 /* right column main body */
 
+/* popup dialogs */
+.dialog {
+    background-color:#262626;
+    max-width:920px;
+    min-width:245px;
+    display:none;
+    color:#b0aeac;
+    border:solid 6px #4d4b49;
+    box-shadow: 2px 2px 12px #d2d2d2;
+}
+
+.dialog  h2 {
+    padding:10px;
+    font-size:18px;
+    color:#ffffff;
+}
+
+.dialog  .dialog-content {
+    font-size:14px;
+    line-height:1.4em;
+    padding: 20px 10px;
+}
+
+.simplemodal-overlay {
+    background-color:#000000;
+}
+
+.dialog .dialog-content h6 {
+    font-size:10px;
+    clear:left;
+}
+
+.dialog .dialog-content h2 {
+    font-size:18px;
+    coolor:#ffffff;
+    padding:0;
+    margin-bottom: 10px;
+}
+
+.dialog.login-prompt input {
+    padding:4px;
+    height:28px;
+    border:solid 1px #82807c;
+    background-color: #4d4b49;
+    margin-bottom: 10px;
+    color:#ffffff;
+}
+
+.dialog.login-prompt aside  {
+    padding-right:10px;
+    padding-top:10px;
+}
+
+.dialog.login-prompt aside > h2 {
+    margin-left:-10px;
+}
+
+.dialog.login-prompt {
+    position:relative;
+}
+
+.dialog.login-prompt aside > button {
+    position:absolute;
+    bottom:20px;
+    right:60px;
+}
+
+.button {
+    padding:8px 15px;
+    border:0;
+    line-height:1.2em;
+    color:#ffffff;
+    background-color: #adff2f;
+    cursor:pointer;
+}
+
+.green {
+    background-color: #adff2f;
+}

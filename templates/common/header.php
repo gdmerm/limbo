@@ -22,7 +22,7 @@
         <a href="<?php echo $config["root"] ?>/support" class="header-item">SUPPORT</a>
         <div class="global-actions">
 			<?php if (!isset($view->data->member) || is_null($view->data->member)) { ?>
-            <a class="register" href="<?php echo $config["root"] ?>/register/">SIGN UP FOR FREE</a> | <a class="register" href="#">Sign in</a>
+            <a class="register" href="<?php echo $config["root"] ?>/register/">SIGN UP FOR FREE</a> | <a class="register login" href="#">Sign in</a>
 			<?php } else { ?>
 			<a class="register" href="<?php echo $config["root"] ?>/#"><?php echo $view->data->member->email ?></a> | <a class="register" href="<?php echo $config["root"] ?>/members/logout">Logout</a>
 			<!-- welcome <a class="register" href="<?php echo $config["root"] ?>/#"><?php echo $view->data->member->firstName ?></a> | <a class="register" href="#">Logout</a> -->

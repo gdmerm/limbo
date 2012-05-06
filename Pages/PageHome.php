@@ -5,15 +5,6 @@ class PageHome extends LMBPageController {
 	public function initialize() {
 		$db = Limbo::getDb();
 
-		/*
-		session_destroy();
-		$login = new LoginController();
-		$login->setDblink($db);
-		if ($login->checkLogin("gdmerm@gmail.com", "agd195")) {
-			$login->setUserAsLoggedIn();
-		}
-		*/
-
 		//Protect this page by requiring login
 		//LoginController::securePage();
 		LoginController::getUserInfo();

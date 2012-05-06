@@ -294,4 +294,7 @@
 </div>
 <!--End Main-->
 
+<!-- reusable dialogs -->
+<?php include("components/dialog_login.php"); ?>
+
 <?php include("common/footer.php") ?>

@@ -126,6 +126,7 @@
     </div>
 </div>
 
+<?php include("components/dialog_login.php"); ?>
 <?php include("common/footer.php") ?>
 
 <script type="text/javascript">
