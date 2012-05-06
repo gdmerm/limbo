@@ -19,6 +19,9 @@ class Limbo {
     	//implementation code here
 		$page = new $controllerId();
 		$page->initialize();
+		if ($action === '$view' || $action === 'view') {
+			TMPLPageController::renderTemplate();
+		}
     }
 
 	public static function getDb() {

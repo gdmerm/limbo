@@ -30,6 +30,5 @@ if ($action === '$view' || $action === 'view') {
 	require_once("actions/$controllerId/" . $action . ".php");
 }
 Limbo::dispatch($controllerId, $action);
-TMPLPageController::renderTemplate();
-
+//TMPLPageController::renderTemplate();
 ?>

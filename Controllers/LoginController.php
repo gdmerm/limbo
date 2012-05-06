@@ -49,7 +49,7 @@ class LoginController {
 			$userController->setDBlink(Limbo::getDb());
 			$user = $userController->getSingleById($uid);
 			User::$isGuest = false;
-			User::$membership = $user->getFields();;
+			User::$membership = $user->getFields();
 		}
 	}
 

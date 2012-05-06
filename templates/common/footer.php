@@ -26,11 +26,17 @@ $(document).ready(function () {
 		$(".dialog.login-prompt").modal({
 			overlayClose: true,
 			zIndex: 9999
-		})
+		});
 	});
 
-	$(".dialog.login-prompt button").on("click", function () {
-	   $(this).parents("form").submit();
+	$(".dialog button.login").on("click", function (e) {
+		e.preventDefault();
+		$(this).parents("form").submit();
+	});
+
+	$(".dialog button.register").on("click", function (e) {
+		e.preventDefault();
+		window.location = '/limbo/register';
 	});
 });
 </script>

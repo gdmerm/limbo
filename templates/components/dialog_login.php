@@ -8,7 +8,7 @@
 			<h6>Password</h6>
 			<input class="span-4 boxmodelfix" type="password" name="password" />
 
-			<button class="button green submit span-2">Login</button>
+			<button class="button green login span-2">Login</button>
 		</div>
 
 		<aside class="span-4 boxmodelfix">

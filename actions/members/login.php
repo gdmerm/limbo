@@ -12,6 +12,8 @@ class Members extends LMBPageController
 		$loginController->setDblink(Limbo::getDb());
 		if ($loginController->checkLogin($email, $password)) {
 			header('location: /limbo');
+		} else {
+			echo "here";
 		}
 	}
 }
