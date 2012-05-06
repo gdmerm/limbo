@@ -190,7 +190,6 @@
 
                             <div class="tab-price">
                                 <!--<span style="color: #626366"><strike>49,99&euro;</strike></span>-->
-
                                 49,99&euro;
                             </div>
                         </div>

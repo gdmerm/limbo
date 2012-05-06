@@ -11,13 +11,13 @@
 	<div id="main-content">
 
 		<!-- Left column-->
-		<div class="left-column">
+		<div class="leftcolumn">
 
 		</div>
 		<!-- End Left column-->
 
 		<!--Right column-->
-		<div class="right-column" id="asd">
+		<div class="rightcolumn">
 
 		</div>
 		<!--End Right Column-->

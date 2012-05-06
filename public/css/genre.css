@@ -1,0 +1,127 @@
+#main-content .header {
+    color: #B0AEAC;
+    font-size: 18px;
+    margin-bottom: 8px;
+    width: 616px;
+}
+
+#upcoming{
+    margin-bottom: 16px;
+    width: 616px;
+}
+
+#upcoming .upcoming-content{
+    width: 616px;
+    height: 254px;
+    overflow: hidden;
+    position: relative;
+    border-style: solid;
+}
+
+.rightcolumn .topblock-genre{
+    background-color: #292F35;
+    background-image: url("../images/right_blue.png");
+    background-repeat: no-repeat;
+    width: 308px;
+    height: 25px;
+    margin-top: 30px;
+
+}
+
+.rightcolumn .topblock-genre .offers{
+    font-size:12px;
+    font-weight: bold;
+    padding-left:16px;
+    padding-top: 5px;
+}
+
+
+#main-content .games-header{
+    color: #B0AEAC;
+    font-size: 18px;
+    margin-bottom: 8px;
+    width: 616px;
+}
+
+#main-content .line{
+    margin-bottom: 8px;
+    border-top: 1px solid #626366;
+}
+
+#main-content #header-title{
+    background-color: #262626;
+    color: #B0AEAC;
+    margin-bottom: 1px;
+}
+
+#header-title .title{
+    padding: 4px 16px;
+    font-weight: bold;
+    width:50px;
+    float: left;
+}
+
+#header-title .game-price{
+    text-align: center;
+    width: 50px;
+    border-left: 1px solid #000000;
+    float: right;
+    padding: 4px 0 0 8px;
+}
+
+#header-title .format{
+    text-align: center;
+    width: 70px;
+    border-left: 1px solid #000000;
+    float: right;
+    padding: 4px 0 0 8px;
+}
+
+#header-title .discount{
+    text-align: center;
+    width: 70px;
+    border-left: 1px solid #000000;
+    float: right;
+    padding: 4px 0 0 8px;
+}
+
+#header-title .released{
+    border-left: 1px solid #000000;
+    float: right;
+    padding: 4px 0 0 8px;
+    text-align: center;
+    width: 75px;
+}
+
+.tab-released{
+    color: #B0AEAC;
+    font-family: tahoma,helvetica,arial,trebuchet ms,sans-serif;
+    font-size: 11px;
+    position: absolute;
+    right: 228px;
+    top: 22px;
+}
+
+#games-list{
+    padding-bottom: 16px;
+}
+
+#games-list .games-row-grey{
+    background-color: #1F1F1F;
+    border-color: #1F1F1F;
+    height: 58px;
+    margin-bottom: 1px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+}
+
+#games-list .games-row-black{
+    background-color: #1A1A1A;
+    border-color: #1A1A1A;
+    height: 58px;
+    margin-bottom: 1px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+}

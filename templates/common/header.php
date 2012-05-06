@@ -5,6 +5,7 @@
     <title>Limbo</title>
     <link rel="stylesheet" type="text/css" href="<?php echo $config["assets"] ?>/css/limbo.css"/>
     <link rel="stylesheet" type="text/css" href="<?php echo $config["assets"] ?>/css/register.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo $config["assets"] ?>/css/genre.css"/>
 </head>
 
 <body>

@@ -49,7 +49,7 @@
                         <div class="form-notes">
                             <br>
                             <br>
-                            <p>We recommend that you create a unique password for Limbo. Please never share your password</p>
+                            <p>We recommend that you create a unique password for Limbo. Please never share your password.</p>
                         </div>
                         <div class="clear"></div>
                     </div>
@@ -67,8 +67,8 @@
                         </div>
                         <div class="form-notes">
                             <br>
-                            <p>Your email address is used to confirm purchases and help you manage access to your Steam account.</p>
-                            <p>Limbo will send a confirmation email to this account. Please follow the link in the mail to verify your email account with Limbo</p>
+                            <p>Please type a valid email address.Your email will be used to access your Limbo account.</p>
+                            <p>This email will be used only for registering reasons,not for advertising and will not be shared with any third party companies.</p>
                         </div>
                         <div class="clear"></div>
                     </div>
