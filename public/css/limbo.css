@@ -44,6 +44,8 @@ aside {
 
 .boxmodelfix {
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 .inline-block {
@@ -137,6 +139,22 @@ p{
 a{
     color: #FFFFFF;
     text-decoration: none;
+}
+
+.error {
+    color:#cc0000;
+}
+
+input.error {
+    border:solid 1px #cc0000 !important;
+}
+
+input.success {
+    border:solid 1px #69ba5f !important;
+}
+
+.success {
+    color: #69ba5f;
 }
 
 #global-header {

@@ -30,7 +30,7 @@
                         </div>
                         <div class="form-notes">
                             <br>
-                            <span>Availability</span>
+                            <span></span>
                         </div>
                         <div class="clear"></div>
                     </div>
@@ -131,9 +131,28 @@
 
 <script type="text/javascript">
 	$(document).ready(function () {
+		var validator = new LimboValidator();
+
 		$(".create-account").on("click", function (e) {
 			e.preventDefault();
 			$(this).parent().parent().submit();
 		})
+
+		$("#accountname").on("blur", function (e) {
+			//validate username here
+			validator.isUserTaken($(this).val());
+		});
+
+		$("#reenter_password").on("blur", function (e) {
+			validator.validatePasswords($("#password").val(), $(this).val());
+		});
+
+		$("#email, #reenter_email").on("blur", function () {
+			validator.validateEmail.call(this, $(this).val());
+		})
+
+		$("#reenter_email").on("blur", function () {
+			validator.validateEmailSimilarity($("#email").val(), $("#reenter_email").val());
+		});
 	});
 </script>

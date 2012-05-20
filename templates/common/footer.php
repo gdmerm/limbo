@@ -19,6 +19,7 @@
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $config['js'] ?>/plugins/jquery.simplemodal.1.4.2.min.js"></script>
+<script type="text/javascript" src="<?php echo $config['js'] ?>/dev/LimboValidator.js"></script>
 <script type="text/javascript">
 $(document).ready(function () {
 	$("#global-header a.login").on("click", function (e) {
