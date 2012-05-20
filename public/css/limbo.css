@@ -35,6 +35,76 @@ a:active{outline:0;}
 *{outline:none;}
 
 
+aside {
+    float:right !important;
+}
+
+.clearfix {
+    overflow:auto;
+}
+
+.boxmodelfix {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.inline-block {
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+}
+
+button {
+    padding:10px 20px;
+    color:#ffffff;
+    font-size:14px;
+    background-color:#FDB913;
+    display:block;
+    background:none;
+    outline: none;
+}
+
+.span-1 {
+    width:60px;
+}
+.span-2 {
+    width:120px;
+}
+.span-3 {
+    width:180px;
+}
+
+.span-4 {
+    width:240px;
+}
+
+.span-5 {
+    width:300px;
+}
+
+.span-6 {
+    width:360px;
+}
+
+.span-7 {
+    width:420px;
+}
+
+.span-8 {
+    width:480px;
+}
+
+.span-9 {
+    width:540px;
+}
+
+.span-10 {
+    width:600px;
+}
+
+.span-1,.span-2,.span-3,.span-4,.span-5,.span-6,.span-7,.span-8,.span-9,.span-10 {float:left}
+
 //start limbo main css
 .clear{
     clear:both;
@@ -69,6 +139,22 @@ p{
 a{
     color: #FFFFFF;
     text-decoration: none;
+}
+
+.error {
+    color:#cc0000;
+}
+
+input.error {
+    border:solid 1px #cc0000 !important;
+}
+
+input.success {
+    border:solid 1px #69ba5f !important;
+}
+
+.success {
+    color: #69ba5f;
 }
 
 #global-header {
@@ -170,6 +256,10 @@ div.content {
 
 }
 
+.tab-active:hover{
+    text-decoration: none;
+}
+
 .tab{
     border-right: 1px solid #000000;
     color: #FFFFFF;
@@ -192,6 +282,7 @@ div.content {
     filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4D4B49', endColorstr='#4D4B49'); /* IE6 & IE7 */
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4D4B49', endColorstr='#4D4B49')"; /* IE8 */
     background: -webkit-gradient(linear, left top, left bottom, from(#4D4B49), to(#4D4B49)); /* for webkit browsers */
+    text-decoration: none;
 
 }
 
@@ -208,6 +299,40 @@ div.content {
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#595553', endColorstr='#6e6a69')"; /* IE8 */
     background: -webkit-gradient(linear, left top, left bottom, from(#595553), to(#6e6a69)); /* for webkit browsers */
     background: -moz-linear-gradient(top,  #595553,  #6e6a69); /* for firefox 3.6+ */
+}
+
+.games-navigation .genres {
+    position:relative;
+    float:left;
+}
+
+.games-navigation .genres ul {
+    position:absolute;
+    display:none;
+    left:0;
+    top:35px;
+    z-index:9999;
+    background-color:#000000;
+}
+
+.games-navigation .genres:hover ul {
+    display:block;
+    opacity:0.8;
+}
+
+.games-navigation .genres:hover ul li {
+    width:127px;
+    padding:10px 15px;
+}
+
+.games-navigation .genres:hover ul li:hover {
+    background-color:#595553;
+}
+
+.games-navigation .genres:hover ul li a {
+    color:#ffffff;
+    display:block;
+    font-weight:800;
 }
 
 /* Search Button */
@@ -251,7 +376,7 @@ div#main{
     background-image: url("../images/maincontent.png");
     background-repeat: repeat-x;
     background-color: #000000;
-    height: 1000px;
+    height: auto;
 }
 
 div#main-content{
@@ -275,6 +400,7 @@ div#main-content{
 div.leftcolumn{
     float: left;
     width: 616px;
+    margin-bottom: 16px;
 }
 
 div#mainslideshow{
@@ -466,9 +592,133 @@ div#featured-games{
 /* right column */
 div.rightcolumn{
     float: right;
-    height: 150px;
+    height: auto;
     width: 308px;
     margin-left: 14px;
+}
+
+.rightcolumn .topblock{
+    background-color: #292F35;
+    background-image: url("../images/right_blue.png");
+    background-repeat: no-repeat;
+    width: 308px;
+    height: 25px;
+
+}
+
+.rightcolumn .gamenewsblock{
+    background-position: right bottom;
+    border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #262626;
+    border-style: none none none solid;
+    border-width: medium medium medium 1px;
+    background-color: #262626;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.rightcolumn .gamenewsblock .gamenews-img {
+    padding-left:16px;
+}
+
+.rightcolumn .gamenewsblock .gamenews-content a {
+    color: #FDB913;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.rightcolumn .gamenewsblock .gamenews-content ul{
+    padding-left: 10px;
+}
+
+.rightcolumn .gamenewsblock .gamenews-content li{
+    list-style-type: square;
+    padding-top: 10px;
+}
+
+.rightcolumn .topblock .gamenews{
+    font-size:12px;
+    font-weight: bold;
+    padding-left:16px;
+    padding-top: 5px;
+    margin-bottom: 25px;
+}
+
+.rightcolumn .gamenewsblock{
+    background-position: right bottom;
+    border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #262626;
+    border-style: none none none solid;
+    border-width: medium medium medium 1px;
+    background-color: #262626;
+    padding: 16px;
+
+}
+
+.rightcolumn .topblock .offers{
+    font-size:12px;
+    font-weight: bold;
+    padding-left:16px;
+    padding-top: 5px;
+}
+
+.rightcolumn .mainblock{
+    background-position: right bottom;
+    border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #262626;
+    border-style: none none none solid;
+    border-width: medium medium medium 1px;
+    background-color: #262626;
+    padding: 16px;
+
+}
+
+.rightcolumn .mainblock .imageblock{
+    display: block;
+    height: 45px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.rightcolumn .mainblock .imageblock .tinyimg{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.rightcolumn .mainblock .imageblock .tinyimg2{
+    position: absolute;
+    right:10px;
+    top: 0;
+}
+
+.rightcolumn .mainblock .imageblock .tinyimg img{
+    width:120px;
+    height: 45px;
+}
+
+.offerinfo p{
+    font-weight: bold;
+    font-size: 12px;
+    color: #B0AEAC;
+}
+
+.rightcolumn .mainblock .btn-addtocart{
+   padding-top: 15px;
+   float: right;
+}
+
+.rightcolumn .mainblock .btn-addtocart a{
+    background-image: url("http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_repeat.gif");
+    background-repeat: repeat-x;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 11px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 11px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 3px 1px 5px #888;
+
 }
 /* end right column */
 
@@ -549,10 +799,11 @@ div#releases-offers{
     position: relative;
 }
 
-.tab-row{
+#released-games-1.tab-row{
     border-bottom: 1px solid #000000;
     height: 77px;
     position: relative;
+    background-color: #1F1F1F;
 }
 
 .tab-games-image {
@@ -565,4 +816,146 @@ tiny-cap-image {
     height: 45px;
     width: 120px;
 }
+
+.tab-games-desc{
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 16px;
+    left: 152px;
+    overflow: hidden;
+    top: 18px;
+    width: 400px;
+}
+
+.tab-games-desc .genre-release{
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 12px;
+    color:#626366;
+}
+
+.tab-games-discper{
+    color: #FFFFFF;
+    font-size: 14px;
+    height: 19px;
+    line-height: 19px;
+    position: absolute;
+    right: 90px;
+    text-align: center;
+    top: 30px;
+    width: 46px;
+    background-color: #7B3445;
+}
+
+.tab-price{
+    color: #B0AEAC;
+    font-family: tahoma,helvetica,arial,trebuchet ms,sans-serif;
+    font-size: 11px;
+    position: absolute;
+    right: 16px;
+    top: 22px;
+}
+
+#released-games-2.tab-row{
+    border-bottom: 1px solid #000000;
+    height: 77px;
+    position: relative;
+    background-color: #1A1A1A;
+}
+
+#released-games-3.tab-row{
+    border-bottom: 1px solid #000000;
+    height: 77px;
+    position: relative;
+    background-color: #1F1F1F;
+}
+
+#released-games-4.tab-row{
+    border-bottom: 1px solid #000000;
+    height: 77px;
+    position: relative;
+    background-color: #1A1A1A;
+}
 /*end offers-releases*/
+
+/* right column main body */
+
+/* popup dialogs */
+.dialog {
+    background-color:#262626;
+    max-width:920px;
+    min-width:245px;
+    display:none;
+    color:#b0aeac;
+    border:solid 6px #4d4b49;
+    box-shadow: 2px 2px 12px #d2d2d2;
+}
+
+.dialog  h2 {
+    padding:10px;
+    font-size:18px;
+    color:#ffffff;
+}
+
+.dialog  .dialog-content {
+    font-size:14px;
+    line-height:1.4em;
+    padding: 20px 10px;
+}
+
+.simplemodal-overlay {
+    background-color:#000000;
+}
+
+.dialog .dialog-content h6 {
+    font-size:10px;
+    clear:left;
+}
+
+.dialog .dialog-content h2 {
+    font-size:18px;
+    coolor:#ffffff;
+    padding:0;
+    margin-bottom: 10px;
+}
+
+.dialog.login-prompt input {
+    padding:4px;
+    height:28px;
+    border:solid 1px #82807c;
+    background-color: #4d4b49;
+    margin-bottom: 10px;
+    color:#ffffff;
+}
+
+.dialog.login-prompt aside  {
+    padding-right:10px;
+    padding-top:10px;
+}
+
+.dialog.login-prompt aside > h2 {
+    margin-left:-10px;
+}
+
+.dialog.login-prompt {
+    position:relative;
+}
+
+.dialog.login-prompt aside > button {
+    position:absolute;
+    bottom:20px;
+    right:60px;
+}
+
+.button {
+    padding:8px 15px;
+    border:0;
+    line-height:1.2em;
+    color:#ffffff;
+    background-color: #adff2f;
+    cursor:pointer;
+}
+
+.green {
+    background-color: #adff2f;
+}

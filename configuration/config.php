@@ -9,7 +9,8 @@
 
 $config = array(
     "root" => "/limbo",
-    "assets" => "/limbo/public"
+    "assets" => "/limbo/public",
+	"js" => "/limbo/public/scripts/"
 );
 
 ?>
