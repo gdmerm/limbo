@@ -4,7 +4,15 @@
 		<div class="games-navigation-area">
 			<div class="games-navigation">
 				<a class="tab-active" href="#">FEATURED GAMES</a>
-				<a class="tab" href="#">GENRES</a>
+				<div class="genres">
+					<a class="tab" href="#">GENRES</a>
+					<ul>
+						<?php foreach($view->data->genres as $genre) { ?>
+						<li class="boxmodelfix"><a href="#"><?php echo $genre ?></a></li>
+						<?php } ?>
+					</ul>
+				</div>
+
 				<a class="tab" href="#">MAC</a>
 				<a class="tab" href="#">VIDEOS</a>
 				<a class="final-tab" href="#">&nbsp;</a>

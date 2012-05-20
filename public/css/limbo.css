@@ -283,6 +283,40 @@ div.content {
     background: -moz-linear-gradient(top,  #595553,  #6e6a69); /* for firefox 3.6+ */
 }
 
+.games-navigation .genres {
+    position:relative;
+    float:left;
+}
+
+.games-navigation .genres ul {
+    position:absolute;
+    display:none;
+    left:0;
+    top:35px;
+    z-index:9999;
+    background-color:#000000;
+}
+
+.games-navigation .genres:hover ul {
+    display:block;
+    opacity:0.8;
+}
+
+.games-navigation .genres:hover ul li {
+    width:127px;
+    padding:10px 15px;
+}
+
+.games-navigation .genres:hover ul li:hover {
+    background-color:#595553;
+}
+
+.games-navigation .genres:hover ul li a {
+    color:#ffffff;
+    display:block;
+    font-weight:800;
+}
+
 /* Search Button */
 
 .games-search{
