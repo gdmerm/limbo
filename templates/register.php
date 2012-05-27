@@ -133,10 +133,7 @@
 	$(document).ready(function () {
 		var validator = new LimboValidator();
 
-		$(".create-account").on("click", function (e) {
-			e.preventDefault();
-			$(this).parent().parent().submit();
-		})
+		$(".create-account").data("validation-status", "false");
 
 		$("#accountname").on("blur", function (e) {
 			//validate username here
@@ -154,5 +151,13 @@
 		$("#reenter_email").on("blur", function () {
 			validator.validateEmailSimilarity($("#email").val(), $("#reenter_email").val());
 		});
+
+		//handle click on submit button
+		$(".create-account").on("click", function (e) {
+			e.preventDefault();
+			validationStatus = $(this).data("validation-status");
+			if (validationStatus === "true")
+				$(this).parent().parent().submit();
+		})
 	});
 </script>

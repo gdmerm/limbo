@@ -26,6 +26,7 @@
       var similar;
       similar = false;
       if (password1 === password2) similar = true;
+      if (password1 === "" && password2 === "") return false;
       if (!similar) {
         return $("#password, #reenter_password").attr("class", false).addClass("error");
       } else {
@@ -49,6 +50,7 @@
       var similar;
       similar = false;
       if (email1 === email2) similar = true;
+      if (email1 === "" && email2 === "") return false;
       if (!similar) {
         return $("#email, #reenter_email").attr("class", false).addClass("error");
       } else {
