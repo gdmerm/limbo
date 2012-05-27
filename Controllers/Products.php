@@ -15,7 +15,8 @@ class Products extends DBTableController {
         "DELETE" => "delete from products where productid=?",
         "SELECT_BY_GENRE" => "select * from products where genre=?",
         "FEATURED_BY_FORMAT" => "select p.productid, p.name, p.price from featuredProducts fp, products p where p.productid=fp.productid and fp.format=? order by fp.weight asc",
-		"LIST_GENRES" => "select distinct genre from products order by genre"
+		"LIST_GENRES" => "select distinct genre from products order by genre",
+		"SPECIAL_OFFERS" => "select productid, name, genre, releaseDate, price, discountPercent from products where discountPercent > 0",
     );
 
     private $fields = array(
@@ -106,6 +107,31 @@ class Products extends DBTableController {
         return $results;
         //return $this->arrayGroupBy($results, "genre");
     }
+
+	public function getSpecialOffers() {
+		$db = $this->getDBLink();
+		$sql = $this->sqlStatements["SPECIAL_OFFERS"];
+		$stmt = $db->stmt_init();
+		$results = array();
+		$results_index = 0;
+		if ($stmt->prepare($sql)) {
+			$stmt->execute();
+			$stmt->bind_result($productid, $name, $genre, $releaseDate, $price, $discountPercent);
+			while ($stmt->fetch()) {
+				$results[$results_index] = array(
+					"productid" => $productid,
+					"name" => $name,
+					"genre" => $genre,
+					"releaseDate" => $releaseDate,
+					"price" => $price,
+					"discountPercent" => $discountPercent
+				);
+				$results_index++;
+			}
+		}
+		$stmt->close();
+		return $results;
+	}
 
     public function getFeatured($format) {
         $db = $this->getDBlink();

@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set("Europe/London");
 session_start();
 include_once("configuration/local.php");
 require_once("application/Limbo.php");

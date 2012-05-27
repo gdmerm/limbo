@@ -93,6 +93,8 @@
                         </a>
                         <!--End Image 3-->
                     </div>
+
+
                     <div class="control-left">
                         <h5><img border="0" src="<?php echo $config["assets"] ?>/images/arrowleft.gif" alt="Left">&nbsp;&nbsp;PREV</h5>
                     </div>
@@ -103,14 +105,6 @@
                         </h5>
                     </div>
                 </div>
-
-                <div id="mainslideshow-control-bar">
-                    <div id="mainslideshow-control" class="slider">
-                        <div class="slider-bg"></div>
-                        <div class="handle"></div>
-                    </div>
-                </div>
-                <div></div>
 
             </div>
             <!-- End Main Picture slideshow-->
@@ -236,6 +230,40 @@
 
                     </div>
                 </div>
+				<div class="tab-page" style="display:none">
+					<div id="special-offers">
+
+						<?php foreach($view->data->specialOffers as $index => $offer): ?>
+						<div class="tab-row <?php echo ($index % 2 === 0) ? "alt" : "" ?>">
+							<div class="tab-games-image">
+								<a href="#"><img class="tiny-cap-image" src="<?php echo $config["assets"] ?>/images/thumbs/<?php echo $offer->productid ?>/tiny.jpg"</a>
+							</div>
+							<div class="tab-games-desc">
+								<a href="#"><h4><?php echo $offer->name ?></h4></a>
+								<div class="genre-release">
+									<?php echo $offer->genre ?> - Available :
+									<?php
+									$rdate = new DateTime($offer->releaseDate);
+									echo $rdate->format('m-d-Y');
+									?>
+								</div>
+							</div>
+							<div class="tab-games-discper">
+								-<?php echo $offer->discountPercent ?>%
+							</div>
+							<div class="tab-price">
+								<?php
+								$dprice = $offer->price * (1 - $offer->discountPercent/100);
+								?>
+								<span style="color: #626366"><strike><?php echo $offer->price ?>&euro;</strike></span>
+								<?php echo round($dprice, 2)?>&euro;
+							</div>
+						</div>
+						<?php endforeach ?>
+
+
+					</div>
+				</div>
             </div>
 
             <!--End New releases - offers-->
@@ -266,7 +294,7 @@
                 </div>
             </div>
 
-
+			<!--
             <div class="topblock">
                 <div class="offers">Today's Offer</div>
             </div>
@@ -287,6 +315,8 @@
                 </div>
                 <div class="clear"></div>
             </div>
+            -->
+			<?php include("components/today_offer.php") ?>
 
         </div>
         <!--End Right Column Div-->
@@ -298,3 +328,9 @@
 <?php include("components/dialog_login.php"); ?>
 
 <?php include("common/footer.php") ?>
+
+<script type="text/javascript">
+	var slider = new GameSlider("#mainslideshow-scroll", 4, true);
+	var featuredTabs = new Tabber("#featured-games", ".featured-container");
+	var releasesTabs = new Tabber("#releases-offers", ".releases-container");
+</script>
