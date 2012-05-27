@@ -58,6 +58,10 @@ class PageHome extends LMBPageController {
 
 		TMPLPageController::appendToView("promoted", $promoted);
 
+		//Get genres for top navigation
+		$genres = $prodController->listGenres();
+		TMPLPageController::appendToView('genres', $genres);
+
 		//Get PC Featured Products
 		$featured = array(
 			"PC" => null,

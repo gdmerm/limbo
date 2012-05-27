@@ -14,7 +14,8 @@ class Products extends DBTableController {
         "SELECT" => "select * from products where productid=?",
         "DELETE" => "delete from products where productid=?",
         "SELECT_BY_GENRE" => "select * from products where genre=?",
-        "FEATURED_BY_FORMAT" => "select p.productid, p.name, p.price from featuredProducts fp, products p where p.productid=fp.productid and fp.format=? order by fp.weight asc"
+        "FEATURED_BY_FORMAT" => "select p.productid, p.name, p.price from featuredProducts fp, products p where p.productid=fp.productid and fp.format=? order by fp.weight asc",
+		"LIST_GENRES" => "select distinct genre from products order by genre"
     );
 
     private $fields = array(
@@ -128,6 +129,24 @@ class Products extends DBTableController {
         $stmt->close();
         return $results;
     }
+
+	public function listGenres() {
+		$db = $this->getDBLink();
+		$sql = $this->sqlStatements["LIST_GENRES"];
+		$stmt = $db->stmt_init();
+		$results = array();
+		$results_index = 0;
+		if ($stmt->prepare($sql)) {
+			$stmt->execute();
+			$stmt->bind_result($genre);
+			while ($stmt->fetch()) {
+				$results[$results_index] = $genre;
+				$results_index++;
+			}
+		}
+		$stmt->close();
+		return $results;
+	}
 
     public function delete($productid) {
         $db = $this->getDBlink();

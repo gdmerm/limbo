@@ -5,6 +5,7 @@ require_once("application/Limbo.php");
 require_once("controllers/LMBPageController.php");
 require_once("controllers/DBTableController.php");
 require_once("controllers/LoginController.php");
+require_once("controllers/ValidationController.php");
 require_once("controllers/TMPLPageController.php");
 require_once("controllers/Products.php");
 require_once("models/Product.php");
