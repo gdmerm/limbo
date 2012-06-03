@@ -18,6 +18,7 @@
 <!--End Footer-->
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo $config['js'] ?>/jquery-ui/js/jquery-ui-1.8.20.custom.min.js"></script>
 <script type="text/javascript" src="<?php echo $config['js'] ?>/plugins/jquery.simplemodal.1.4.2.min.js"></script>
 <script type="text/javascript" src="<?php echo $config['js'] ?>/plugins/jquery.nivo.slider.pack.js"></script>
 <script type="text/javascript" src="<?php echo $config['js'] ?>/dev/LimboValidator.js"></script>
@@ -41,6 +42,10 @@ $(document).ready(function () {
 	$(".dialog button.register").on("click", function (e) {
 		e.preventDefault();
 		window.location = '/limbo/register';
+	});
+
+	$(".searchbox input").autocomplete({
+		source: "/limbo/productactions/search"
 	});
 });
 </script>

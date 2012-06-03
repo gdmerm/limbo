@@ -989,3 +989,7 @@ tiny-cap-image {
     display:block;
 }
 .nivo-slice, .nivo-box {position:absolute}
+
+.ui-autocomplete {
+    z-index: 9999 !important;
+}

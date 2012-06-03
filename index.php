@@ -11,6 +11,7 @@ require_once("controllers/TMPLPageController.php");
 require_once("controllers/Products.php");
 require_once("models/Product.php");
 require_once("controllers/UsersController.php");
+require_once("controllers/ShoppingCartController.php");
 require_once("models/User.php");
 
 $controllerId = strtolower($_GET["c"]);
