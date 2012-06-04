@@ -8,7 +8,7 @@
 					<a class="tab" href="#">GENRES</a>
 					<ul>
 						<?php foreach($view->data->genres as $genre) { ?>
-						<li class="boxmodelfix"><a href="#"><?php echo $genre ?></a></li>
+						<li class="boxmodelfix"><a href="<?php echo $config["root"] ?>/genre?g=<?php echo $genre ?>"><?php echo $genre ?></a></li>
 						<?php } ?>
 					</ul>
 				</div>

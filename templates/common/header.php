@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo $config["assets"] ?>/css/limbo.css"/>
     <link rel="stylesheet" type="text/css" href="<?php echo $config["assets"] ?>/css/register.css"/>
     <link rel="stylesheet" type="text/css" href="<?php echo $config["assets"] ?>/css/genre.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo $config["js"] ?>/jquery-ui/css/ui-lightness/jquery-ui-1.8.20.custom.css" />
 </head>
 
 <body>

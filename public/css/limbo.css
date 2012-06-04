@@ -759,6 +759,10 @@ div.rightcolumn{
 .featured-footer{
 
 }
+
+.tab-row.alt {
+    background-color:#1a1a1a;
+}
 /*end featured games content */
 
 /*start offers-releases*/
@@ -878,6 +882,13 @@ tiny-cap-image {
     position: relative;
     background-color: #1A1A1A;
 }
+
+.tab-row {
+    background-color: #1F1F1F;
+    border-bottom: 1px solid #000000;
+    height: 77px;
+    position: relative;
+}
 /*end offers-releases*/
 
 /* right column main body */
@@ -960,4 +971,25 @@ tiny-cap-image {
 
 .green {
     background-color: #adff2f;
+}
+
+.nivoSlider {
+    position:relative;
+    width:616px; /* Change this to your images width */
+    height:254px; /* Change this to your images height */
+}
+.nivoSlider img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+.nivoSlider a {
+    border:0;
+    display:block;
+}
+.nivo-slice, .nivo-box {position:absolute}
+
+.ui-autocomplete {
+    z-index: 9999 !important;
 }

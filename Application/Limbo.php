@@ -18,6 +18,14 @@ class Limbo {
 		}
     }
 
+	public static function mysqldate($phpdate) {
+		return date('Y-m-d H:i:s', $phpdate);
+	}
+
+	public static function phpdate($mysqldate) {
+		return strtotime($mysqldate);
+	}
+
 	public static function getDb() {
 		return self::$db;
 	}
