@@ -1,11 +1,5 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: gdmerm
- * Date: 4/15/12
- * Time: 12:16 PM
- * To change this template use File | Settings | File Templates.
- */
+
 abstract class DBTableController {
     private $dblink;
     private $contract;
