@@ -12,7 +12,7 @@
 
 		<!-- Left column-->
 		<div class="leftcolumn">
-
+        <?php echo $view->data->product->name ?>
 		</div>
 		<!-- End Left column-->
 

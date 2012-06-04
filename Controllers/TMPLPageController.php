@@ -1,11 +1,5 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: gdmerm
- * Date: 4/15/12
- * Time: 8:26 PM
- * To change this template use File | Settings | File Templates.
- */
+
 class TMPLPageController {
     public static $viewData = array("data" => null);
     private static $templateFile;
