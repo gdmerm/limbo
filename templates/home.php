@@ -158,16 +158,11 @@
                             <div class="tab-games-desc">
                                 <a href="#"><h4>Max Payne 3</h4></a>
                                 <div class="genre-release">
-                                    Action - Available : 4 May 2012
+                                    Action - Available : 1 June 2012
                                 </div>
                             </div>
-                            <div class="tab-games-discper">
-                                -10%
-                            </div>
                             <div class="tab-price">
-                                <span style="color: #626366"><strike>49,99&euro;</strike></span>
-                                <br>
-                                45&euro;
+                                <span style="color: #B0AEAC;">49,99&euro;</span>
                             </div>
                         </div>
 
@@ -178,13 +173,13 @@
                             <div class="tab-games-desc">
                                 <a href="#"><h4>Call of Duty: Modern Warfare 3</h4></a>
                                 <div class="genre-release">
-                                    Action - Available : 4 May 2012
+                                    Action - Available : 8 September 2011
                                 </div>
                             </div>
 
                             <div class="tab-price">
                                 <!--<span style="color: #626366"><strike>49,99&euro;</strike></span>-->
-                                49,99&euro;
+                                39,99&euro;
                             </div>
                         </div>
 
@@ -195,16 +190,11 @@
                             <div class="tab-games-desc">
                                 <a href="#"><h4>Deus Ex: Human Revolution</h4></a>
                                 <div class="genre-release">
-                                    Action - Available : 4 May 2012
+                                    Action - Available : 26 August 2011
                                 </div>
                             </div>
-                            <div class="tab-games-discper">
-                                -10%
-                            </div>
                             <div class="tab-price">
-                                <span style="color: #626366"><strike>49,99&euro;</strike></span>
-                                <br>
-                                45&euro;
+                                <span style="color: #B0AEAC;">49,99&euro;</span>
                             </div>
                         </div>
 
@@ -215,16 +205,11 @@
                             <div class="tab-games-desc">
                                 <a href="#"><h4>The Elder Scrolls V: Skyrim</h4></a>
                                 <div class="genre-release">
-                                    Action - Available : 4 May 2012
+                                    Action - Available : 11 November 2011
                                 </div>
                             </div>
-                            <div class="tab-games-discper">
-                                -10%
-                            </div>
                             <div class="tab-price">
-                                <span style="color: #626366"><strike>49,99&euro;</strike></span>
-                                <br>
-                                45&euro;
+                                <span style="color: #B0AEAC;">49,99&euro;</span>
                             </div>
                         </div>
 
@@ -248,7 +233,7 @@
 									?>
 								</div>
 							</div>
-							<div class="tab-games-discper">
+							<div class="tab-games-discper right">
 								-<?php echo $offer->discountPercent ?>%
 							</div>
 							<div class="tab-price">

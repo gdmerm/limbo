@@ -292,7 +292,7 @@ div.content {
     float: left;
     font-size: 11px;
     line-height: 35px;
-    padding: 0 77px;
+    padding: 0 146px;
     text-decoration: none;
     background-color: #595553; /* for non-css3 browsers */
     filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#595553', endColorstr='#6e6a69'); /* IE6 & IE7 */
@@ -846,11 +846,14 @@ tiny-cap-image {
     height: 19px;
     line-height: 19px;
     position: absolute;
-    right: 90px;
+    right: 70px;
     text-align: center;
     top: 30px;
     width: 46px;
     background-color: #7B3445;
+}
+.right{
+    right:110px;
 }
 
 .tab-price{
@@ -859,7 +862,7 @@ tiny-cap-image {
     font-size: 11px;
     position: absolute;
     right: 16px;
-    top: 22px;
+    top: 31px;
 }
 
 #released-games-2.tab-row{
@@ -1106,5 +1109,19 @@ tiny-cap-image {
     background-color: #262626;
     padding: 16px;
     margin-bottom: 20px;
+}
+
+.details-block li{
+    margin-bottom: 6px;
+    color: #626366;
+    font-weight: bold;
+}
+
+.details-block li.last{
+    margin-bottom: 0px;
+}
+
+.details-block span{
+    color: #ffffff;
 }
 /* end game pager */

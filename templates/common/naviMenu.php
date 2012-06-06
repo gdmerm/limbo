@@ -14,7 +14,6 @@
 				</div>
 
 				<a class="tab" href="#">MAC</a>
-				<a class="tab" href="#">VIDEOS</a>
 				<a class="final-tab" href="#">&nbsp;</a>
 				<div class="games-search">
 					<a href="#"><img border="0" class="image-search" src="<?php echo $config["assets"] ?>/images/search.png" alt="search"></a>

@@ -46,10 +46,26 @@
 
 		<!--Right column-->
 		<div class="rightcolumn">
-           <div class="game-information-tab">
+
+             <div class="game-information-tab">
                <div class="game-information">Game Information</div>
            </div>
-           <div class="details-block">More Text Here</div>
+           <div class="details-block">
+               <ul>
+                   <li>Title: <span><?php echo $view->data->product->name ?></span></li>
+                   <li>Genre: <span><?php echo $view->data->product->genre ?></span> </li>
+                   <li>Publisher: <span><?php echo $view->data->product->publisher ?></span> </li>
+                   <li>Studio: <span><?php echo $view->data->product->studio ?></span> </li>
+                   <li>Release Date: <span>
+                                       <?php
+                                       $rdate = new DateTime($view->data->product->releaseDate);
+                                       echo $rdate->format('m-d-Y');
+                                       ?>
+                                      </span>
+                   </li>
+                   <li class="last">Languages : <span><?php echo $view->data->product->languages ?></span></li>
+               </ul>
+           </div>
 		</div>
 		<!--End Right Column-->
 

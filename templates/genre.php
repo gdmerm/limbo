@@ -85,11 +85,11 @@
                     <div class="tab-games-discper">
                         <?php echo $game->discountPercent ?>%
                     </div>
-					<!--
+
 					<div class="tab-games-format">
-						<?php //echo $game->format ?>
+						<?php echo $game->format ?>
 					</div>
-					-->
+
                     <div class="tab-price">
 						<?php if ($game->discountPercent > 0): ?>
 							<?php
