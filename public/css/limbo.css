@@ -988,8 +988,123 @@ tiny-cap-image {
     border:0;
     display:block;
 }
-.nivo-slice, .nivo-box {position:absolute}
+.nivo-slice, .nivo-box {
+    position:absolute
+}
 
 .ui-autocomplete {
     z-index: 9999 !important;
 }
+
+/* game page */
+
+.game-name{
+    height:40px;
+    line-height:40px;
+    padding: 0 4px;
+    font-size: 30px;
+}
+
+.game-purchase-wrapper{
+    margin-bottom: 30px;
+}
+
+.game-purchase{
+    background-color: #262626;
+    border: 1px solid #4D4B49;
+    color: #898A8C;
+    font-size: 12px;
+    margin-bottom: 28px;
+    padding: 16px 16px 26px;
+    position: relative;
+    z-index: 1;
+}
+
+.game-purchase h1{
+    color: #FFFFFF;
+    font-size:21px;
+}
+
+
+.game-purchase-button{
+    background-color: #3C3D3E;
+    border-radius: 3px 3px 3px 3px;
+    height: 34px;
+    padding: 3px 3px 3px 0;
+    float:right;
+    margin-left: 3px;
+}
+
+.game-purchase-price{
+    background-color: #000000;
+    font-size: 13px;
+    height: 26px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 8px;
+    margin-left: 3px;
+}
+
+.game-purchase-price span{
+    font-weight:bold;
+    font-size:15px;
+}
+.game-purchase-button .btn-addtocart{
+    float: right;
+}
+
+.game-purchase-button .btn-addtocart a{
+    background-image: url("http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_repeat.gif");
+    background-repeat: repeat-x;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 11px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 11px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 3px 1px 5px #888;
+    margin-left:40px;
+}
+
+.game-description{
+    line-height: 1.5em;
+    margin-bottom: 18px;
+}
+
+.game-description h2{
+    margin-bottom: 6px;
+    margin-top: 18px;
+    color: #FFFFFF;
+    font-size:15px;
+}
+
+.game-information-tab{
+    background-color: #292F35;
+    background-image: url("../images/right_blue.png");
+    background-repeat: no-repeat;
+    width: 308px;
+    height: 25px;
+    margin-top:316px;
+}
+
+.game-information{
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    padding-left: 16px;
+    padding-top: 5px;
+}
+
+.details-block{
+    background-position: right bottom;
+    border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #262626;
+    border-style: none none none solid;
+    border-width: medium medium medium 1px;
+    background-color: #262626;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+/* end game pager */
