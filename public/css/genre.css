@@ -99,7 +99,16 @@
     font-size: 11px;
     position: absolute;
     right: 228px;
-    top: 22px;
+    top: 29px;
+}
+
+.tab-games-format{
+    color: #B0AEAC;
+    font-family: tahoma,helvetica,arial,trebuchet ms,sans-serif;
+    font-size: 11px;
+    position: absolute;
+    right: 152px;
+    top: 29px;
 }
 
 #games-list{
