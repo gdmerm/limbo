@@ -9,63 +9,53 @@
 <div id="main">
 
 	<div id="main-content">
+        <h2 class="cart-title">My Cart</h2>
 		<!-- Left column-->
 		<div class="leftcolumn">
-            <div class="game-name"><?php echo $view->data->product->name ?></div>
 
-            <div id="upcoming">
-                <div class="upcoming-content nivoslider">
-                    <?php for($i=0;$i<13;$i++): ?>
-                    <img width="616" height="254" src="<?php echo $config["assets"] ?>/images/upcoming/<?php echo $i+1?>.jpg"/>
-                    <?php endfor ?>
-                </div>
-            </div>
+            <div class="cart-area">
 
-            <div class="game-purchase-wrapper">
-                <div class="game-purchase">
-                    <h1>BUY <?php echo $view->data->product->name ?></h1>
-                    <div class="game-purchase-button">
-                        <div class="game-purchase-price"><span>49,99&euro;</span>
-                            <div class="btn-addtocart">
-                                <a href="#">ADD TO CART</a>
+                <div class="cart-game-list">
+
+                    <div class="cart-game">
+                        <div class="cart-game-price discount">
+                            <div class="original-price">49,99&euro;</div>
+                            <div class="final-price">10&euro;</div>
+                        </div>
+                        <div class="cart-game-image">
+                            <a href="#"><img src="<?php echo $config["assets"] ?>/images/thumbs/30/tiny.jpg"></a>
+                        </div>
+                        <div class="tab-games-desc">
+                            <a href="#"><h4><?php echo $view->data->product->name ?></h4></a>
+                            <div class="genre-release">
+                                <?php echo $view->data->product->genre ?> - Available : <span>
+                                <?php
+                                $rdate = new DateTime($view->data->product->releaseDate);
+                                echo $rdate->format('m-d-Y');
+                                ?>
+                                </span>
                             </div>
                         </div>
-
                     </div>
+
                 </div>
             </div>
 
-            <div class="game-description">
-                <h2>Game Description</h2>
-                <div class="line"></div>
-                <p><?php echo $view->data->product->description ?></p>
+            <div class="checkout">
+                <a class="button-continue">Continue Shopping</a>
             </div>
+
+            <a href="#"><div class="button-checkout">Checkout</div></a>
+
+
 
         </div>
 		<!-- End Left column-->
 
 		<!--Right column-->
 		<div class="rightcolumn">
+            <?php include("components/today_offer.php") ?>
 
-             <div class="game-information-tab">
-               <div class="game-information">Game Information</div>
-           </div>
-           <div class="details-block">
-               <ul>
-                   <li>Title: <span><?php echo $view->data->product->name ?></span></li>
-                   <li>Genre: <span><?php echo $view->data->product->genre ?></span> </li>
-                   <li>Publisher: <span><?php echo $view->data->product->publisher ?></span> </li>
-                   <li>Studio: <span><?php echo $view->data->product->studio ?></span> </li>
-                   <li>Release Date: <span>
-                                       <?php
-                                       $rdate = new DateTime($view->data->product->releaseDate);
-                                       echo $rdate->format('m-d-Y');
-                                       ?>
-                                      </span>
-                   </li>
-                   <li class="last">Languages : <span><?php echo $view->data->product->languages ?></span></li>
-               </ul>
-           </div>
 		</div>
 		<!--End Right Column-->
 

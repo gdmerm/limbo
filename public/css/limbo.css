@@ -1125,3 +1125,101 @@ tiny-cap-image {
     color: #ffffff;
 }
 /* end game pager */
+
+
+
+/*cart css*/
+
+h2.cart-title{
+    color: #B0AEAC;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.cart-area{
+    background-color: #000000;
+    border: 1px solid #4D4B49;
+    color: #B0AEAC;
+    line-height: 18px;
+    position: relative;
+}
+
+.cart-game{
+    height: 77px;
+    line-height: 16px;
+    position: relative;
+}
+
+.cart-game-price.discount{
+    top: 15px;
+}
+
+.cart-game-price{
+    position: absolute;
+    right: 14px;
+    text-align: right;
+    top: 20px;
+}
+
+.cart-game-price .original-price{
+    color: #626366;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.cart-game-price .final-price{
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.cart-game-image{
+    position: absolute;
+    left: 16px;
+    top: 16px;
+}
+
+.checkout{
+    padding: 30px;
+    background-color: #262626;
+    line-height: 18px;
+    margin-top: 8px;
+    position: relative;
+}
+
+.button-continue{
+    color: #FFFFFF;
+    background-image: url("http://cdn.store.steampowered.com/public/images/v5/btn_checkout_blue_bg.png");
+    background-repeat: repeat-x;
+    cursor: pointer;
+    display: block;
+    font-size: 11px;
+    height: 28px;
+    line-height: 24px;
+    padding: 0 17px;
+    top: 12px;
+    left: 10px;
+    text-align: center;
+    float: left;
+    font-weight: bold;
+    position: absolute;
+
+}
+
+.button-checkout{
+    background-image:url("http://cdn.store.steampowered.com/public/images/v5/btn_checkout_active_bg.png");
+    color: #FFFFFF;
+    background-repeat: repeat-x;
+    cursor: pointer;
+    display: block;
+    font-size: 11px;
+    height: 28px;
+    line-height: 24px;
+    padding: 0 17px;
+    text-align: center;
+    float: right;
+    font-weight: bold;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+/*end cart css*/
