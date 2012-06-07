@@ -16,6 +16,12 @@ class Register extends LMBPageController
 		  TMPLPageController::appendToView("member", null);
 	  }
 	  */
+
+	  //Get genres for top navigation
+	  $prodController = new Products();
+	  $prodController->setDBlink($db);
+	  $genres = $prodController->listGenres();
+	  TMPLPageController::appendToView('genres', $genres);
   }
 }
 ?>

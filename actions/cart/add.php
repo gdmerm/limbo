@@ -11,7 +11,7 @@ class Cart extends LMBPageController
 	public function initialize()
 	{
 		//collect parameters
-		$productid = (isset($_GET['productid'])) ? (int) $_GET['productid'] : 0;
+		$productid = (isset($_GET['id'])) ? (int) $_GET['id'] : 0;
 		$sessionid = session_id();
 		$now = new DateTime();
 		$mysqldate = $now->format("Ymd 00:00:00");
@@ -27,9 +27,7 @@ class Cart extends LMBPageController
 		$productPrice = $productsController->getPrice($productid);
 
 		if ($shoppingCartController->alreadyCheckedIn($productid, $sessionid)) {
-			//update action
-			echo "already in cart!";
-
+			header('Location: /limbo/cart');
 		} else {
 			//insert action
 			$cartFields = array(
@@ -39,7 +37,7 @@ class Cart extends LMBPageController
 				'creationDate' => $mysqldate,
 			);
 			$shoppingCartController->save($cartFields);
-			//header('Location: /limbo/cart');
+			header('Location: /limbo/cart');
 		}
 
 	}

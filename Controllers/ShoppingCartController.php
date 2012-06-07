@@ -6,6 +6,7 @@ class ShoppingCartController extends DBTableController
 		'INSERT' => "insert into shoppingCart (productid, cartSessionId, priceEach, creationDate) values (?,?,?,?)",
 		'UPDATE' => "update shoppingCart set priceEach=? where productid=? and cartSessionId=?",
 		'CHECKEDIN' => "select count(productid) noofitems from shoppingCart where productid=? and cartSessionId=?",
+		'LIST_CART' => "select p.name, p.genre, p.releaseDate, s.priceEach, p.discountPercent, s.productid from products p, shoppingCart s where s.cartSessionId=? and s.productid = p.productid",
 	);
 
 	private $fields = array(
@@ -43,6 +44,32 @@ class ShoppingCartController extends DBTableController
 	public function getSingleById($modelID)
 	{
 		// TODO: Implement getSingleById() method.
+	}
+
+	public function listCart($sessionid) {
+		$db = $this->getDBlink();
+		$sql = $this->sqlStatements["LIST_CART"];
+		$stmt = $db->stmt_init();
+		$results = array();
+		$results_index = 0;
+		if ($stmt->prepare($sql)) {
+			$stmt->bind_param("s", $sessionid);
+			$stmt->execute();
+			$stmt->bind_result($name, $genre, $releaseDate, $priceEach, $discount, $productid);
+			while ($stmt->fetch()) {
+				$results[$results_index] = array(
+					"productid" => $productid,
+					"name" => $name,
+					"genre" => $genre,
+					"releaseDate" => $releaseDate,
+					"price" => $priceEach,
+					"discount" => $discount,
+				);
+				$results_index++;
+			}
+		}
+		$stmt->close();
+		return $results;
 	}
 
 	public function delete($modelID)

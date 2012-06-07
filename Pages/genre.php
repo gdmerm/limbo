@@ -37,6 +37,10 @@ class Genre
 
 		$games = $prodController->getByGenre($genre);
 		TMPLPageController::appendToView("games", $games);
+
+		//Get genres for top navigation
+		$genres = $prodController->listGenres();
+		TMPLPageController::appendToView('genres', $genres);
     }
 }
 ?>

@@ -12,5 +12,11 @@ class About extends LMBPageController
 	public function initialize()
 	{
 		TMPLPageController::setTemplateFile("templates/about.php");
+
+		//Get genres for top navigation
+		$prodController = new Products();
+		$prodController->setDBlink($db);
+		$genres = $prodController->listGenres();
+		TMPLPageController::appendToView('genres', $genres);
 	}
 }

@@ -16,23 +16,6 @@ class PageHome extends LMBPageController {
 		//append querystring to data contract
 		TMPLPageController::appendToView("queryString", $_GET);
 
-		//Save a Product
-				/*
-		$productFields = array(
-			"name" => "Secret of the Monkey Island",
-			"studio" => 'Sierra',
-			"publisher" => "Sierra",
-			"languages" => "en",
-			"price" => 12.99,
-			"releaseDate" => "19920101",
-			"rating" => 10,
-			"genre" => "Adventure"
-		);
-		$productid = $prodController->save($productFields);
-		$product = $prodController->getSingleById($productid);
-		//echo $product->jsonize();
-		*/
-
 		//Get promoted products
 		$promoted = array(
 			"promo_1" => null,
