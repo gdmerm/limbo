@@ -1268,6 +1268,7 @@ h1.about-title{
 }
 /*end about css*/
 
+
 /*checkout dialog css */
 .dialog.checkout .dialog-content.step-1 {
     text-align: center;
@@ -1281,3 +1282,27 @@ h1.about-title{
     font-weight:bold;
     font-size:14px;
 }
+
+/*news css*/
+h1.news{
+    font-size: 30px;
+}
+
+.news-title{
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.news-main{
+    color: #BBBBBB;
+    line-height: 17px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.source{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*end news css*/
