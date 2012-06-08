@@ -41,6 +41,14 @@ class Genre
 		//Get genres for top navigation
 		$genres = $prodController->listGenres();
 		TMPLPageController::appendToView('genres', $genres);
+
+		//append member info if any
+		LoginController::getUserInfo();
+		if (!User::$isGuest) {
+			TMPLPageController::appendToView("member", User::$membership);
+		} else {
+			TMPLPageController::appendToView("member", null);
+		}
     }
 }
 ?>

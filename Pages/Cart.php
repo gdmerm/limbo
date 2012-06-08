@@ -10,7 +10,6 @@ class Cart extends LMBPageController
 		TMPLPageController::appendToView("queryString", $_GET);
 		TMPLPageController::setTemplateFile("templates/cart.php");
 
-
 		$shoppingCartController = new ShoppingCartController();
 		$shoppingCartController->setDBlink($db);
 		$cartProducts = $shoppingCartController->listCart(session_id());
@@ -29,7 +28,6 @@ class Cart extends LMBPageController
 		} else {
 			TMPLPageController::appendToView("member", null);
 		}
-
 	}
 }
 

@@ -7,6 +7,7 @@ class ShoppingCartController extends DBTableController
 		'UPDATE' => "update shoppingCart set priceEach=? where productid=? and cartSessionId=?",
 		'CHECKEDIN' => "select count(productid) noofitems from shoppingCart where productid=? and cartSessionId=?",
 		'LIST_CART' => "select p.name, p.genre, p.releaseDate, s.priceEach, p.discountPercent, s.productid from products p, shoppingCart s where s.cartSessionId=? and s.productid = p.productid",
+		'DELETE_ITEM' => "delete from shoppingCart where productid=?",
 	);
 
 	private $fields = array(
@@ -75,6 +76,17 @@ class ShoppingCartController extends DBTableController
 	public function delete($modelID)
 	{
 		// TODO: Implement delete() method.
+	}
+
+	public function removeItem($itemid)
+	{
+		$db = $this->getDBlink();
+		$sql = $this->sqlStatements["DELETE_ITEM"];
+		$stmt = $db->stmt_init();
+		$stmt->prepare($sql);
+		$stmt->bind_param("i", $itemid);
+		$stmt->execute();
+		$stmt->close();
 	}
 
 	public function update($model)

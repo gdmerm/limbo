@@ -29,6 +29,7 @@
 							<?php else: ?>
 								<div class="final-price"><?php echo $product->price ?>&euro;</div>
 							<?php endif ?>
+							<a class="button-checkout delete" href="<?php echo $config['root'] ?>/cart/removeItem/?id=<?php echo $product->productid ?>">Remove</a>
                         </div>
                         <div class="cart-game-image">
                             <a href="<?php echo $config['root'] ?>/game?id=<?php echo $product->productid ?>"><img src="<?php echo $config["assets"] ?>/images/thumbs/<?php echo $product->productid ?>/tiny.jpg"></a>
