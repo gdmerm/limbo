@@ -1,14 +1,23 @@
 <?php
-
-class Cart extends LMBPageController
+/**
+ * Created by JetBrains PhpStorm.
+ * User: gdmerm
+ * Date: 6/8/12
+ * Time: 8:56 AM
+ * To change this template use File | Settings | File Templates.
+ */
+class Checkout extends LMBPageController
 {
-
 	public function initialize()
 	{
+		LoginController::getUserInfo();
+		if (User::$isGuest)
+			header('Location: /limbo');
+
 		$db = Limbo::getDb();
 		LoginController::getUserInfo();
 		TMPLPageController::appendToView("queryString", $_GET);
-		TMPLPageController::setTemplateFile("templates/cart.php");
+		TMPLPageController::setTemplateFile("templates/checkout.php");
 
 
 		$shoppingCartController = new ShoppingCartController();
@@ -29,8 +38,5 @@ class Cart extends LMBPageController
 		} else {
 			TMPLPageController::appendToView("member", null);
 		}
-
 	}
 }
-
-?>

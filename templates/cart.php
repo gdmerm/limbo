@@ -51,10 +51,10 @@
             </div>
 
             <div class="checkout">
-                <a class="button-continue">Continue Shopping</a>
+                <a class="button-continue" href="<?php echo $config['root'] ?>">Continue Shopping</a>
             </div>
 
-            <a href="#"><div class="button-checkout">Checkout</div></a>
+            <a href="<?php echo $config['root'] ?>/checkout"><div class="button-checkout">Checkout</div></a>
 
 
 
@@ -74,3 +74,22 @@
 </div>
 
 <?php include("common/footer.php") ?>
+
+<script type="text/javascript">
+	var LIMBO = (function (my) {
+		my.USER = {"isLogged" : <?php echo (is_null($view->data->member)) ? "false" : "true" ?>}
+		return my;
+	})(LIMBO || {});
+
+	$(document).ready(function () {
+		if (!LIMBO.USER.isLogged) {
+			$(".button-checkout").on("click", function (e) {
+				e.preventDefault();
+				$(".dialog.login-prompt").modal({
+					overlayClose: true,
+					zIndex: 9999
+				});
+			});
+		}
+	});
+</script>

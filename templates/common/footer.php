@@ -1,3 +1,7 @@
+<!-- reusable dialogs -->
+<?php include("/limbo/templates/components/dialog_login.php"); ?>
+
+
 <!--Footer-->
 <div id="footer">
 	<ul>
