@@ -1223,6 +1223,11 @@ h2.cart-title{
     font-weight: bold;
 }
 
+.button-checkout.delete {
+    background: none;
+    background-color: #a10000;
+}
+
 .cart-icon{
     float:left;
     padding-right: 8px;
