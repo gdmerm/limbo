@@ -8,6 +8,7 @@ class ShoppingCartController extends DBTableController
 		'CHECKEDIN' => "select count(productid) noofitems from shoppingCart where productid=? and cartSessionId=?",
 		'LIST_CART' => "select p.name, p.genre, p.releaseDate, s.priceEach, p.discountPercent, s.productid from products p, shoppingCart s where s.cartSessionId=? and s.productid = p.productid",
 		'DELETE_ITEM' => "delete from shoppingCart where productid=?",
+		'EMPTY_CART' => "delete from shoppingCart where cartSessionId=?"
 	);
 
 	private $fields = array(
@@ -85,6 +86,17 @@ class ShoppingCartController extends DBTableController
 		$stmt = $db->stmt_init();
 		$stmt->prepare($sql);
 		$stmt->bind_param("i", $itemid);
+		$stmt->execute();
+		$stmt->close();
+	}
+
+	public function emptyAll($sessionid)
+	{
+		$db = $this->getDBlink();
+		$sql = $this->sqlStatements["EMPTY_CART"];
+		$stmt = $db->stmt_init();
+		$stmt->prepare($sql);
+		$stmt->bind_param("s", $sessionid);
 		$stmt->execute();
 		$stmt->close();
 	}

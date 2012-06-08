@@ -1274,13 +1274,17 @@ h1.about-title{
     text-align: center;
 }
 
-.dialog.checkout .dialog-content.step-2 {
+.dialog.checkout .dialog-content.step-2,.dialog-content.step-3 {
     display:none;
 }
 
 .dialog.checkout .amount {
     font-weight:bold;
     font-size:14px;
+    color:#ffffff;
+}
+
+.dialog.checkout label {
 }
 
 /*news css*/

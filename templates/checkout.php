@@ -13,6 +13,8 @@
 
 			<div class="cart-area">
 
+				<?php if ($view->data->cartProducts) { ?>
+
 				<div class="cart-game-list">
 					<?php
 					$total = 0;
@@ -86,16 +88,26 @@
 
 			<a href="#"><div class="button-checkout">Checkout with PayPal</div></a>
 
+			<?php } else { ?>
+
+			<div class="cart-game-list" style="padding:40px;font-size:16px;">
+				Your cart is empty.
+			</div>
+
+			<?php } ?>
+
 
 
 		</div>
 		<!-- End Left column-->
 
+		<?php if ($view->data->cartProducts): ?>
 		<!--Right column-->
 		<div class="rightcolumn">
 			<?php include("components/today_offer.php") ?>
 		</div>
 		<!--End Right Column-->
+		<?php endif ?>
 
 		<div class="clear"></div>
 	</div>
@@ -105,8 +117,16 @@
 <?php include("common/footer.php") ?>
 
 <script type="text/javascript">
+
+	var LIMBO = (function (my) {
+		my.config = {
+			"root" : "<?php echo $config['root']  ?>"
+		};
+		return my;
+	})(LIMBO || {});
+
 	$(document).ready(function () {
-		$(".button-checkout").on("click", function (e) {
+		$(".button-checkout").eq(0).on("click", function (e) {
 			var timeout;
 			e.preventDefault();
 			$(".dialog.checkout").modal({
@@ -121,6 +141,23 @@
 			}, 3000);
 
 			$(".dialog.checkout .amount").html($(".final-price.totals").html());
+		});
+
+		$(".dialog .button-pay .button-checkout").on("click", function (e) {
+			var promise;
+			e.preventDefault();
+			$(".dialog.checkout .step-2").hide();
+			$(".dialog.checkout .step-1 .wait-message").html("We are processing your payment please wait...")
+			$(".dialog.checkout .step-1").show();
+
+			promise = $.get(LIMBO.config.root + "/cart/purge");
+			promise.done(function () {
+				timeout = setTimeout(function () {
+					$(".dialog.checkout .step-2").hide();
+					$(".dialog.checkout .step-1").hide();
+					$(".dialog.checkout .step-3").show();
+				}, 4000)
+			});
 		});
 	});
 </script>
