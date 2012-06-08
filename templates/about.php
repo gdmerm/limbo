@@ -27,7 +27,7 @@ I am a template.
         <!-- Left column-->
         <div class="leftcolumn">
 
-             <img class="features" src="http://cdn.store.steampowered.com/public/images/v5/about/tour_gridview.jpg"/>
+             <img class="features" src="<?php echo $config["assets"] ?>/images/about-games.jpg"/>
              <h3 class="features-title">Download and Play all the new Blockbusters!</h3>
              <p class="features-main">Choose from a huge variety of games to download and play directly on your computer. Read game news from all the major Gaming sites and check out new releases every day.</p>
 
@@ -35,7 +35,7 @@ I am a template.
 
             <div class="line about"></div>
 
-            <img class="features right" src="http://cdn.store.steampowered.com/public/images/v5/about/tour_gridview.jpg"/>
+            <img class="features right" src="<?php echo $config["assets"] ?>/images/about-offers.jpg"/>
             <h3 class="features-title">Get benefit from our Special Offers!</h3>
             <p class="features-main">Save money from our special offers list and checkout out the "Today's offer" surprise bundle renewed every day!</p>
 
@@ -43,7 +43,7 @@ I am a template.
 
             <div class="line about"></div>
 
-            <img class="features" src="http://cdn.store.steampowered.com/public/images/v5/about/tour_gridview.jpg"/>
+            <img class="features" src="<?php echo $config["assets"] ?>/images/about-mac.png"/>
             <h3 class="features-title">Download and Play games on your Mac!</h3>
             <p class="features-main">Choose and download from our catalogue all the new game releases for Mac gamers!</p>
 
@@ -51,7 +51,7 @@ I am a template.
 
             <div class="line about"></div>
 
-            <img class="features right" src="http://cdn.store.steampowered.com/public/images/v5/about/tour_gridview.jpg"/>
+            <img class="features right" src="<?php echo $config["assets"] ?>/images/about-support.jpg"/>
             <h3 class="features-title">24 Hours Phone & Email support!</h3>
             <p class="features-main">Have a problem with our service? Contact us today 24 hours a day to solve your problem and enjoy your favorite game immediately!</p>
 
