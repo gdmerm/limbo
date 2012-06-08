@@ -22,6 +22,7 @@
         <a href="<?php echo $config["root"] ?>/about" class="header-item">ABOUT</a>
         <a href="<?php echo $config["root"] ?>/support" class="header-item">SUPPORT</a>
         <div class="global-actions">
+            <a href="#"><div class="cart-icon"><img src="<?php echo $config["assets"] ?>/images/cart.png"></div></a>
 			<?php if (!isset($view->data->member) || is_null($view->data->member)) { ?>
             <a class="register" href="<?php echo $config["root"] ?>/register/">SIGN UP FOR FREE</a> | <a class="register login" href="#">Sign in</a>
 			<?php } else { ?>

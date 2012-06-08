@@ -1222,4 +1222,9 @@ h2.cart-title{
     font-size: 14px;
     font-weight: bold;
 }
+
+.cart-icon{
+    float:left;
+    padding-right: 8px;
+}
 /*end cart css*/
