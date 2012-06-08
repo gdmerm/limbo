@@ -2,9 +2,7 @@
 <?php $view = json_decode($viewData); ?>
 
 <?php include("common/header.php") ?>
-
 <?php include("common/naviMenu.php") ?>
-
 
 <div id="main">
 
@@ -53,7 +51,7 @@
 
 					<div class="cart-game" style="background-color:#444444">
 						<div class="cart-game-price">
-							<div class="final-price"><?php echo round($total, 2) ?>&euro;</div>
+							<div class="final-price totals"><?php echo round($total, 2) ?>&euro;</div>
 						</div>
 						<div class="tab-games-desc">
 							<span>Total:</span>
@@ -103,5 +101,26 @@
 	</div>
 
 </div>
-
+<?php include("components/dialog_checkout.php") ?>
 <?php include("common/footer.php") ?>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		$(".button-checkout").on("click", function (e) {
+			var timeout;
+			e.preventDefault();
+			$(".dialog.checkout").modal({
+				overlayClose: true,
+				zIndex: 9999
+			});
+
+			//show step-2
+			timeout = setTimeout(function () {
+				$(".dialog.checkout .step-1").hide();
+				$(".dialog.checkout .step-2").show();
+			}, 3000);
+
+			$(".dialog.checkout .amount").html($(".final-price.totals").html());
+		});
+	});
+</script>

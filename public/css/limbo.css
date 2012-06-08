@@ -1267,3 +1267,17 @@ h1.about-title{
      float: right;
 }
 /*end about css*/
+
+/*checkout dialog css */
+.dialog.checkout .dialog-content.step-1 {
+    text-align: center;
+}
+
+.dialog.checkout .dialog-content.step-2 {
+    display:none;
+}
+
+.dialog.checkout .amount {
+    font-weight:bold;
+    font-size:14px;
+}
