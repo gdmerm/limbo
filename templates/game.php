@@ -17,9 +17,11 @@
 
 			<div id="upcoming">
 				<div class="upcoming-content nivoslider">
-					<?php for($i=0;$i<13;$i++): ?>
-					<img width="616" height="254" src="<?php echo $config["assets"] ?>/images/upcoming/<?php echo $i+1?>.jpg"/>
-					<?php endfor ?>
+					<img
+						border="0"
+						class="slideshow-capsule-image"
+						src="<?php echo $config["assets"] ?>/images/thumbs/<?php echo $view->data->product->productid?>/1.jpeg"
+					/>
 				</div>
 			</div>
 
