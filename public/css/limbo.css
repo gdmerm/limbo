@@ -1228,3 +1228,37 @@ h2.cart-title{
     padding-right: 8px;
 }
 /*end cart css*/
+
+/*start about css*/
+
+h1.about-title{
+    font-size: 30px;
+    margin-top: 14px;
+
+}
+
+.features{
+    float: left;
+    margin-right: 16px;
+    margin-top: 10px;
+}
+
+.features-title{
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.features-main{
+    margin-top: 8px;
+    color: #898A8C;
+    font-size: 14px;
+}
+
+.line.about{
+    margin-top: 20px;
+}
+
+.features.right{
+     float: right;
+}
+/*end about css*/

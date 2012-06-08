@@ -14,6 +14,7 @@ class About extends LMBPageController
 		TMPLPageController::setTemplateFile("templates/about.php");
 
 		//Get genres for top navigation
+        $db = Limbo::getDb();
 		$prodController = new Products();
 		$prodController->setDBlink($db);
 		$genres = $prodController->listGenres();
