@@ -68,13 +68,13 @@
 
 			<?php foreach($view->data->games as $index => $game): ?>
 
-            <a class="games-row-grey" href="#">
+            <a class="games-row-grey" href="<?php echo $config['root'] ?>/game?id=<?php echo $game->productid ?>">
                 <div id="released-games-<?php echo ($index % 2 == 0) ? '1' : '2' ?>" class="tab-row">
                     <div class="tab-games-image">
-                        <a href="#"><img class="tiny-cap-image" src="<?php echo $config["assets"] ?>/images/thumbs/<?php echo $game->productid ?>/tiny.jpg"></a>
+                        <a href="<?php echo $config['root'] ?>/game?id=<?php echo $game->productid ?>"><img class="tiny-cap-image" src="<?php echo $config["assets"] ?>/images/thumbs/<?php echo $game->productid ?>/tiny.jpg"></a>
                     </div>
                     <div class="tab-games-desc">
-                        <a href="#"><h4><?php echo $game->name ?></h4></a>
+                        <a href="<?php echo $config['root'] ?>/game?id=<?php echo $game->productid ?>"><h4><?php echo $game->name ?></h4></a>
                     </div>
                     <div class="tab-released">
                        <?php
