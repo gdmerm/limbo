@@ -3,7 +3,19 @@
 
   LimboValidator = (function() {
 
-    function LimboValidator() {}
+    function LimboValidator() {
+        $(".create-account").data('validationStatus', true);
+        $(".create-account").on("click", function (e) {
+            e.preventDefault();
+            $(".join-form input[type=text],input[type=password]").each(function () {
+                if ($(this).hasClass("error"))
+                    $(".create-account").data('validationStatus', false);
+            });
+            validationStatus = $(this).data("validation-status");
+            if (validationStatus)
+                $(this).parent().parent().submit();
+        })
+    }
 
     LimboValidator.prototype.isUserTaken = function(username) {
       var messagePlaceholder, promise;
@@ -26,6 +38,7 @@
       var similar;
       similar = false;
       if (password1 === password2) similar = true;
+      if (password1 === "" && password2 === "") return false;
       if (!similar) {
         return $("#password, #reenter_password").attr("class", false).addClass("error");
       } else {
@@ -49,6 +62,7 @@
       var similar;
       similar = false;
       if (email1 === email2) similar = true;
+      if (email1 === "" && email2 === "") return false;
       if (!similar) {
         return $("#email, #reenter_email").attr("class", false).addClass("error");
       } else {

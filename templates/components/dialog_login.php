@@ -14,7 +14,7 @@
 		<aside class="span-4 boxmodelfix">
 			<h2>Create a new account</h2>
 
-			<p>It's free to join and easy to use. Continue on to create your Steam account and get Steam, the leading digital solution for PC and Mac gamers.</p>
+			<p>It's free to join and easy to use. Create your account and join Limbo today, the leading digital solution for PC and Mac gamers.</p>
 
 			<button class="button green register span-3">Register for free</button>
 		</aside>

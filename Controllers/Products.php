@@ -1,11 +1,5 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: gdmerm
- * Date: 4/15/12
- * Time: 12:26 PM
- * To change this template use File | Settings | File Templates.
- */
+
 class Products extends DBTableController {
 
     private $sqlStatements = array(
@@ -14,8 +8,12 @@ class Products extends DBTableController {
         "SELECT" => "select * from products where productid=?",
         "DELETE" => "delete from products where productid=?",
         "SELECT_BY_GENRE" => "select * from products where genre=?",
+		"SELECT_BY_FORMAT" => "select * from products where format like ?",
         "FEATURED_BY_FORMAT" => "select p.productid, p.name, p.price from featuredProducts fp, products p where p.productid=fp.productid and fp.format=? order by fp.weight asc",
-		"LIST_GENRES" => "select distinct genre from products order by genre"
+		"LIST_GENRES" => "select distinct genre from products order by genre",
+		"SPECIAL_OFFERS" => "select productid, name, genre, releaseDate, price, discountPercent from products where discountPercent > 0",
+		"GET_PRICE" => "select price as price from products where productid=?",
+		"SELECT_BY_TERM" => "select productid, name from products where name like ?",
     );
 
     private $fields = array(
@@ -72,6 +70,41 @@ class Products extends DBTableController {
         return $product;
     }
 
+	public function getByFormat($format) {
+		$db = $this->getDBlink();
+		$sql = $this->sqlStatements["SELECT_BY_FORMAT"];
+		$stmt = $db->stmt_init();
+		$results = array();
+		$results_index = 0;
+		$format = '%' . $format . '%';
+		if ($stmt->prepare($sql)) {
+			$stmt->bind_param("s", $format);
+			$stmt->execute();
+			$stmt->bind_result($productid, $name, $studio, $publisher, $langs, $multiplayer, $description, $genre, $releaseDate, $rating, $price, $discountPercent, $vat, $format);
+			while ($stmt->fetch()) {
+				$results[$results_index] = array(
+					"productid" => $productid,
+					"name" => $name,
+					"studio" => $studio,
+					"publisher" => $publisher,
+					"languages" => $langs,
+					"multiplayer" => $multiplayer,
+					"description" => $description,
+					"genre" => $genre,
+					"releaseDate" => $releaseDate,
+					"rating" => $rating,
+					"price" => $price,
+					"discountPercent" => $discountPercent,
+					"vat" => $vat,
+					"format" => $format
+				);
+				$results_index++;
+			}
+		}
+		$stmt->close();
+		return $results;
+	}
+
     public function getByGenre($genre) {
         $db = $this->getDBlink();
         $sql = $this->sqlStatements["SELECT_BY_GENRE"];
@@ -106,6 +139,55 @@ class Products extends DBTableController {
         return $results;
         //return $this->arrayGroupBy($results, "genre");
     }
+
+	public function getBySearchTerm($term) {
+		$db = $this->getDBlink();
+		$sql = $this->sqlStatements["SELECT_BY_TERM"];
+		$stmt = $db->stmt_init();
+		$results = array();
+		$results_index = 0;
+		$term = "%" . $term . "%";
+		if ($stmt->prepare($sql)) {
+			$stmt->bind_param("s", $term);
+			$stmt->execute();
+			$stmt->bind_result($productid, $name);
+			while ($stmt->fetch()) {
+				$results[$results_index] = array(
+					"productid" => $productid,
+					"label" => $name,
+					"value" => $name
+				);
+				$results_index++;
+			}
+		}
+		$stmt->close();
+		return $results;
+	}
+
+	public function getSpecialOffers() {
+		$db = $this->getDBLink();
+		$sql = $this->sqlStatements["SPECIAL_OFFERS"];
+		$stmt = $db->stmt_init();
+		$results = array();
+		$results_index = 0;
+		if ($stmt->prepare($sql)) {
+			$stmt->execute();
+			$stmt->bind_result($productid, $name, $genre, $releaseDate, $price, $discountPercent);
+			while ($stmt->fetch()) {
+				$results[$results_index] = array(
+					"productid" => $productid,
+					"name" => $name,
+					"genre" => $genre,
+					"releaseDate" => $releaseDate,
+					"price" => $price,
+					"discountPercent" => $discountPercent
+				);
+				$results_index++;
+			}
+		}
+		$stmt->close();
+		return $results;
+	}
 
     public function getFeatured($format) {
         $db = $this->getDBlink();
@@ -158,6 +240,25 @@ class Products extends DBTableController {
         }
         $stmt->close();
     }
+
+	public function getPrice($productid) {
+		$db = $this->getDBLink();
+		$sql = $this->sqlStatements["GET_PRICE"];
+		$stmt = $db->stmt_init();
+		$results = array();
+		$results_index = 0;
+		if ($stmt->prepare($sql)) {
+			$stmt->bind_param("i", $productid);
+			$stmt->execute();
+			$stmt->bind_result($price);
+			while ($stmt->fetch()) {
+				$results[$results_index] = $price;
+				$results_index++;
+			}
+			$stmt->close();
+		}
+		return $results[0];
+	}
 
     public function update($productid) {
         //some code here

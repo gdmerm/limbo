@@ -197,12 +197,12 @@ body {
  /* Footer */
 #footer {
     background-image: url("../images/footer.png");
-    background-repeat: repeat-x;
+    background-repeat: repeat;
     border-top: 1px solid #545454;
     color: white;
     float: left;
     margin: 0;
-    padding: 0;
+    padding: 20px 0;
     position: relative;
     text-align: center;
     width: 100%;
@@ -228,6 +228,7 @@ body {
     font-size: 14px;
     color: #4D6D8D;
     text-decoration: none;
+    width:50px;
 }
 
 #footer ul li.links a:hover{

@@ -1,5 +1,6 @@
 <?php include("configuration/config.php"); ?>
 <?php $view = json_decode($viewData); ?>
+<?php $currentPage = "home" ?>
 
 <?php include("common/header.php") ?>
 
@@ -18,7 +19,7 @@
                     <div id="mainslideshow-scroll" class="mainslideshow-scroll-area">
 
                         <!--New Image 0-->
-                        <a id="mainslideshow-0" class="slideshow-capsule" href="#">
+                        <a id="mainslideshow-0" class="slideshow-capsule" href="<?php echo $config['root'] ?>/game?id=<?php echo $view->data->promoted->promo_1->productid ?>">
                             <img border="0" class="slideshow-capsule-image" alt="Crusader" src="<?php echo $config["assets"] ?>/images/thumbs/<?php echo $view->data->promoted->promo_1->productid?>/1.jpeg">
                             <div class="price">
                                 <div class="final-price"> <strong>Buy Now</strong> : <?php echo $view->data->promoted->promo_1->price ?>&euro;</div>
@@ -37,7 +38,7 @@
                         <!--End Image 0-->
 
                         <!--New Image 1-->
-                        <a id="mainslideshow-1" class="slideshow-capsule" href="#">
+                        <a id="mainslideshow-1" class="slideshow-capsule" href="<?php echo $config['root'] ?>/game?id=<?php echo $view->data->promoted->promo_2->productid ?>">
                             <img border="0" class="slideshow-capsule-image" alt="Crusader" src="<?php echo $config["assets"] ?>/images/thumbs/<?php echo $view->data->promoted->promo_2->productid?>/1.jpeg">
                             <div class="price">
                                 <div class="final-price"> <strong>Buy Now</strong> : <?php echo $view->data->promoted->promo_2->price ?>&euro;</div>
@@ -56,7 +57,7 @@
                         <!--End Image 1-->
 
                         <!--New Image 2-->
-                        <a id="mainslideshow-2" class="slideshow-capsule" href="#">
+                        <a id="mainslideshow-2" class="slideshow-capsule" href="<?php echo $config['root'] ?>/game?id=<?php echo $view->data->promoted->promo_3->productid ?>">
                             <img border="0" class="slideshow-capsule-image" alt="Crusader" src="<?php echo $config["assets"] ?>/images/thumbs/<?php echo $view->data->promoted->promo_3->productid?>/1.jpeg">
                             <div class="price">
                                 <div class="final-price"> <strong>Buy Now</strong> : <?php echo $view->data->promoted->promo_3->price ?>&euro;</div>
@@ -75,7 +76,7 @@
                         <!--End Image 2-->
 
                         <!--New Image 3-->
-                        <a id="mainslideshow-3" class="slideshow-capsule" href="#">
+                        <a id="mainslideshow-3" class="slideshow-capsule" href="<?php echo $config['root'] ?>/game?id=<?php echo $view->data->promoted->promo_4->productid ?>">
                             <img border="0" class="slideshow-capsule-image" alt="Crusader" src="<?php echo $config["assets"] ?>/images/thumbs/<?php echo $view->data->promoted->promo_4->productid?>/1.jpeg">
                             <div class="price">
                                 <div class="final-price"> <strong>Buy Now</strong> : <?php echo $view->data->promoted->promo_4->price ?>&euro;</div>
@@ -93,6 +94,8 @@
                         </a>
                         <!--End Image 3-->
                     </div>
+
+
                     <div class="control-left">
                         <h5><img border="0" src="<?php echo $config["assets"] ?>/images/arrowleft.gif" alt="Left">&nbsp;&nbsp;PREV</h5>
                     </div>
@@ -103,14 +106,6 @@
                         </h5>
                     </div>
                 </div>
-
-                <div id="mainslideshow-control-bar">
-                    <div id="mainslideshow-control" class="slider">
-                        <div class="slider-bg"></div>
-                        <div class="handle"></div>
-                    </div>
-                </div>
-                <div></div>
 
             </div>
             <!-- End Main Picture slideshow-->
@@ -128,7 +123,7 @@
                     <div class="scroll-window">
                         <div class="scroll-page">
                             <?php foreach ($view->data->featured->PC as $product){ ?>
-                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/<?php echo $product->productid?>/feat.jpg" width="184" height="69"/>
+                            <a href="<?php echo $config['root'] ?>/game?id=<?php echo $product->productid ?>"><img src="<?php echo $config["assets"]?>/images/thumbs/<?php echo $product->productid?>/feat.jpg" width="184" height="69"/>
                                 <h4><?php echo $product->name?></h4>
                                 <h5><?php echo $product->price?>&euro;</h5>
                             </a>
@@ -136,7 +131,7 @@
                         </div>
                         <div class="scroll-page">
                             <?php foreach ($view->data->featured->MAC as $product){ ?>
-                            <a href="#"><img src="<?php echo $config["assets"]?>/images/thumbs/<?php echo $product->productid?>/feat.jpg" width="184" height="69"/>
+                            <a href="<?php echo $config['root'] ?>/game?id=<?php echo $product->productid ?>"><img src="<?php echo $config["assets"]?>/images/thumbs/<?php echo $product->productid?>/feat.jpg" width="184" height="69"/>
                                 <h4><?php echo $product->name?></h4>
                                 <h5><?php echo $product->price?>&euro;</h5>
                             </a>
@@ -159,83 +154,102 @@
 
                         <div id="released-games-1" class="tab-row">
                             <div class="tab-games-image">
-                                <a href="#"><img class="tiny-cap-image" src="<?php echo $config["assets"] ?>/images/thumbs/1/tiny.jpg"></a>
+                                <a href="<?php echo $config['root'] ?>/game?id=1"><img class="tiny-cap-image" src="<?php echo $config["assets"] ?>/images/thumbs/1/tiny.jpg"></a>
                             </div>
                             <div class="tab-games-desc">
                                 <a href="#"><h4>Max Payne 3</h4></a>
                                 <div class="genre-release">
-                                    Action - Available : 4 May 2012
+                                    Action - Available : 1 June 2012
                                 </div>
                             </div>
-                            <div class="tab-games-discper">
-                                -10%
-                            </div>
                             <div class="tab-price">
-                                <span style="color: #626366"><strike>49,99&euro;</strike></span>
-                                <br>
-                                45&euro;
+                                <span style="color: #B0AEAC;">49,99&euro;</span>
                             </div>
                         </div>
 
                         <div id="released-games-2" class="tab-row">
                             <div class="tab-games-image">
-                                <a href="#"><img class="tiny-cap-image" src="<?php echo $config["assets"] ?>/images/thumbs/2/tiny.jpg"></a>
+                                <a href="<?php echo $config['root'] ?>/game?id=2"><img class="tiny-cap-image" src="<?php echo $config["assets"] ?>/images/thumbs/2/tiny.jpg"></a>
                             </div>
                             <div class="tab-games-desc">
-                                <a href="#"><h4>Call of Duty: Modern Warfare 3</h4></a>
+                                <a href="<?php echo $config['root'] ?>/game?id=2"><h4>Call of Duty: Modern Warfare 3</h4></a>
                                 <div class="genre-release">
-                                    Action - Available : 4 May 2012
+                                    Action - Available : 8 September 2011
                                 </div>
                             </div>
 
                             <div class="tab-price">
                                 <!--<span style="color: #626366"><strike>49,99&euro;</strike></span>-->
-                                49,99&euro;
+                                39,99&euro;
                             </div>
                         </div>
 
                         <div id="released-games-3" class="tab-row">
                             <div class="tab-games-image">
-                                <a href="#"><img class="tiny-cap-image" src="<?php echo $config["assets"] ?>/images/thumbs/23/tiny.jpg"></a>
+                                <a href="<?php echo $config['root'] ?>/game?id=23"><img class="tiny-cap-image" src="<?php echo $config["assets"] ?>/images/thumbs/23/tiny.jpg"></a>
                             </div>
                             <div class="tab-games-desc">
-                                <a href="#"><h4>Deus Ex: Human Revolution</h4></a>
+                                <a href="<?php echo $config['root'] ?>/game?id=23"><h4>Deus Ex: Human Revolution</h4></a>
                                 <div class="genre-release">
-                                    Action - Available : 4 May 2012
+                                    Action - Available : 26 August 2011
                                 </div>
                             </div>
-                            <div class="tab-games-discper">
-                                -10%
-                            </div>
                             <div class="tab-price">
-                                <span style="color: #626366"><strike>49,99&euro;</strike></span>
-                                <br>
-                                45&euro;
+                                <span style="color: #B0AEAC;">49,99&euro;</span>
                             </div>
                         </div>
 
                         <div id="released-games-4" class="tab-row">
                             <div class="tab-games-image">
-                                <a href="#"><img class="tiny-cap-image" src="<?php echo $config["assets"] ?>/images/thumbs/30/tiny.jpg"></a>
+                                <a href="<?php echo $config['root'] ?>/game?id=30"><img class="tiny-cap-image" src="<?php echo $config["assets"] ?>/images/thumbs/30/tiny.jpg"></a>
                             </div>
                             <div class="tab-games-desc">
-                                <a href="#"><h4>The Elder Scrolls V: Skyrim</h4></a>
+                                <a href="<?php echo $config['root'] ?>/game?id=30"><h4>The Elder Scrolls V: Skyrim</h4></a>
                                 <div class="genre-release">
-                                    Action - Available : 4 May 2012
+                                    Action - Available : 11 November 2011
                                 </div>
                             </div>
-                            <div class="tab-games-discper">
-                                -10%
-                            </div>
                             <div class="tab-price">
-                                <span style="color: #626366"><strike>49,99&euro;</strike></span>
-                                <br>
-                                45&euro;
+                                <span style="color: #B0AEAC;">49,99&euro;</span>
                             </div>
                         </div>
 
                     </div>
                 </div>
+				<div class="tab-page" style="display:none">
+					<div id="special-offers">
+
+						<?php foreach($view->data->specialOffers as $index => $offer): ?>
+						<div class="tab-row <?php echo ($index % 2 === 0) ? "alt" : "" ?>">
+							<div class="tab-games-image">
+								<a href="<?php echo $config['root'] ?>/game?id=<?php echo $offer->productid ?>"><img class="tiny-cap-image" src="<?php echo $config["assets"] ?>/images/thumbs/<?php echo $offer->productid ?>/tiny.jpg"</a>
+							</div>
+							<div class="tab-games-desc">
+								<a href="<?php echo $config['root'] ?>/game?id=<?php echo $offer->productid ?>"><h4><?php echo $offer->name ?></h4></a>
+								<div class="genre-release">
+									<?php echo $offer->genre ?> - Available :
+									<?php
+									$rdate = new DateTime($offer->releaseDate);
+									echo $rdate->format('m-d-Y');
+									?>
+								</div>
+							</div>
+							<div class="tab-games-discper right">
+								-<?php echo $offer->discountPercent ?>%
+							</div>
+							<div class="tab-price">
+								<?php
+								$dprice = $offer->price * (1 - $offer->discountPercent/100);
+								?>
+								<span style="color: #626366"><strike><?php echo $offer->price ?>&euro;</strike></span>
+								<?php echo round($dprice, 2)?>&euro;
+							</div>
+						</div>
+						<?php endforeach ?>
+
+
+					</div>
+				</div>
             </div>
 
             <!--End New releases - offers-->
@@ -266,27 +280,7 @@
                 </div>
             </div>
 
-
-            <div class="topblock">
-                <div class="offers">Today's Offer</div>
-            </div>
-            <div class="mainblock">
-                <div class="imageblock">
-                     <div class="tinyimg">
-                         <a href="#"><img src="<?php echo $config["assets"] ?>/images/thumbs/23/tiny.jpg"/></a>
-                     </div>
-                    <div class="tinyimg2">
-                        <a href="#"><img src="<?php echo $config["assets"] ?>/images/thumbs/25/tiny.jpg"/></a>
-                    </div>
-                </div>
-                <div class="offerinfo">
-                    <p>Get Both Deus Ex & Tropico 4 for ONLY: 49,99&euro;</p>
-                </div>
-                <div class="btn-addtocart">
-                    <a href="#">ADD TO CART</a>
-                </div>
-                <div class="clear"></div>
-            </div>
+			<?php include("components/today_offer.php") ?>
 
         </div>
         <!--End Right Column Div-->
@@ -294,8 +288,10 @@
 </div>
 <!--End Main-->
 
-
-<!-- reusable dialogs -->
-<?php include("components/dialog_login.php"); ?>
-
 <?php include("common/footer.php") ?>
+
+<script type="text/javascript">
+	var slider = new GameSlider("#mainslideshow-scroll", 4, true);
+	var featuredTabs = new Tabber("#featured-games", ".featured-container");
+	var releasesTabs = new Tabber("#releases-offers", ".releases-container");
+</script>

@@ -1,11 +1,5 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: gdmerm
- * Date: 5/1/12
- * Time: 10:39 AM
- * To change this template use File | Settings | File Templates.
- */
+
 class Limbo {
 
 	private static $db;
@@ -23,6 +17,18 @@ class Limbo {
 			TMPLPageController::renderTemplate();
 		}
     }
+
+	public static function redirect($url="") {
+		header('Location: ' . self::$configuration['root'] . $url);
+	}
+
+	public static function mysqldate($phpdate) {
+		return date('Y-m-d H:i:s', $phpdate);
+	}
+
+	public static function phpdate($mysqldate) {
+		return strtotime($mysqldate);
+	}
 
 	public static function getDb() {
 		return self::$db;

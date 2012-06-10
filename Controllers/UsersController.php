@@ -1,11 +1,5 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: gdmerm
- * Date: 5/5/12
- * Time: 11:44 AM
- * To change this template use File | Settings | File Templates.
- */
+
 class UsersController extends DBTableController
 {
 	private $sqlStatements = array(

@@ -11,9 +11,9 @@ class Members extends LMBPageController
 		$loginController = new LoginController();
 		$loginController->setDblink(Limbo::getDb());
 		if ($loginController->checkLogin($email, $password)) {
-			header('location: /limbo');
+			Limbo::redirect();
 		} else {
-			echo "here";
+			echo "Invalid credentials. Please try again";
 		}
 	}
 }

@@ -11,6 +11,7 @@ class LimboValidator
 	validatePasswords: (password1, password2) ->
 		similar = false
 		similar = true if password1 is password2
+		if password1 is "" and password2 is "" then return false
 		if not similar
 			$("#password, #reenter_password").attr("class", false).addClass "error"
 		else
@@ -28,6 +29,7 @@ class LimboValidator
 	validateEmailSimilarity: (email1, email2) ->
 		similar = false
 		similar = true if email1 is email2
+		if email1 is "" and email2 is "" then return false
 		if not similar
 			$("#email, #reenter_email").attr("class", false).addClass "error"
 		else

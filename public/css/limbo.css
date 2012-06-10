@@ -34,6 +34,30 @@ a:active{outline:0;}
 #tagCloudContainer{margin-top:20px;}
 *{outline:none;}
 
+/* sticky-footer hack */
+html,body {height:100%}
+.sticky-footer .wrapper {min-height:100%}
+.sticky-footer #main {
+    overflow:auto;
+    padding-bottom:150px;
+}
+.sticky-footer #footer {
+    position:relative;
+    margin-top:-150px;
+    height:150px;
+    clear:both;
+    padding:0;
+    float:none;
+}
+/*Opera Fix*/
+body.sticky-footer:before {
+    content:"";
+    height:100%;
+    float:left;
+    width:0;
+    margin-top:-32767px;
+}
+/* end sticky footer fix */
 
 aside {
     float:right !important;
@@ -292,13 +316,19 @@ div.content {
     float: left;
     font-size: 11px;
     line-height: 35px;
-    padding: 0 77px;
+    padding: 0 138px;
     text-decoration: none;
     background-color: #595553; /* for non-css3 browsers */
     filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#595553', endColorstr='#6e6a69'); /* IE6 & IE7 */
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#595553', endColorstr='#6e6a69')"; /* IE8 */
     background: -webkit-gradient(linear, left top, left bottom, from(#595553), to(#6e6a69)); /* for webkit browsers */
     background: -moz-linear-gradient(top,  #595553,  #6e6a69); /* for firefox 3.6+ */
+}
+
+.final-tab:hover {
+    text-decoration:none;
+    text-indent: -9999px;
+    cursor:default;
 }
 
 .games-navigation .genres {
@@ -608,9 +638,7 @@ div.rightcolumn{
 
 .rightcolumn .gamenewsblock{
     background-position: right bottom;
-    border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #262626;
-    border-style: none none none solid;
-    border-width: medium medium medium 1px;
+    border:solid 1px #262626;
     background-color: #262626;
     padding: 16px;
     margin-bottom: 20px;
@@ -662,9 +690,7 @@ div.rightcolumn{
 
 .rightcolumn .mainblock{
     background-position: right bottom;
-    border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #262626;
-    border-style: none none none solid;
-    border-width: medium medium medium 1px;
+    border:solid 1px #262626;
     background-color: #262626;
     padding: 16px;
 
@@ -679,8 +705,15 @@ div.rightcolumn{
 
 .rightcolumn .mainblock .imageblock .tinyimg{
     position: absolute;
-    left: 0;
     top: 0;
+}
+
+.rightcolumn .mainblock .imageblock .tinyimg:first-child {
+    left:0;
+}
+
+.rightcolumn .mainblock .imageblock .tinyimg:last-child {
+    right:0;
 }
 
 .rightcolumn .mainblock .imageblock .tinyimg2{
@@ -706,7 +739,8 @@ div.rightcolumn{
 }
 
 .rightcolumn .mainblock .btn-addtocart a{
-    background-image: url("http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_repeat.gif");
+    background-image: url("../images/btn_addtocart.gif");
+../images/right_blue.png
     background-repeat: repeat-x;
     color: #FFFFFF;
     display: inline-block;
@@ -757,6 +791,10 @@ div.rightcolumn{
 
 .featured-footer{
 
+}
+
+.tab-row.alt {
+    background-color:#1a1a1a;
 }
 /*end featured games content */
 
@@ -840,11 +878,14 @@ tiny-cap-image {
     height: 19px;
     line-height: 19px;
     position: absolute;
-    right: 90px;
+    right: 70px;
     text-align: center;
     top: 30px;
     width: 46px;
     background-color: #7B3445;
+}
+.right{
+    right:110px;
 }
 
 .tab-price{
@@ -853,7 +894,7 @@ tiny-cap-image {
     font-size: 11px;
     position: absolute;
     right: 16px;
-    top: 22px;
+    top: 31px;
 }
 
 #released-games-2.tab-row{
@@ -875,6 +916,13 @@ tiny-cap-image {
     height: 77px;
     position: relative;
     background-color: #1A1A1A;
+}
+
+.tab-row {
+    background-color: #1F1F1F;
+    border-bottom: 1px solid #000000;
+    height: 77px;
+    position: relative;
 }
 /*end offers-releases*/
 
@@ -959,3 +1007,338 @@ tiny-cap-image {
 .green {
     background-color: #adff2f;
 }
+<<<<<<< HEAD
+=======
+
+.nivoSlider {
+    position:relative;
+    width:616px; /* Change this to your images width */
+    height:254px; /* Change this to your images height */
+}
+.nivoSlider img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+.nivoSlider a {
+    border:0;
+    display:block;
+}
+.nivo-slice, .nivo-box {
+    position:absolute
+}
+
+.ui-autocomplete {
+    z-index: 9999 !important;
+}
+
+/* game page */
+
+.game-name{
+    height:40px;
+    line-height:40px;
+    padding: 0 4px;
+    font-size: 30px;
+}
+
+.game-purchase-wrapper{
+    margin-bottom: 30px;
+}
+
+.game-purchase{
+    background-color: #262626;
+    border: 1px solid #4D4B49;
+    color: #898A8C;
+    font-size: 12px;
+    margin-bottom: 28px;
+    padding: 16px 16px 26px;
+    position: relative;
+    z-index: 1;
+}
+
+.game-purchase h1{
+    color: #FFFFFF;
+    font-size:21px;
+}
+
+
+.game-purchase-button{
+    background-color: #3C3D3E;
+    border-radius: 3px 3px 3px 3px;
+    height: 34px;
+    padding: 3px 3px 3px 0;
+    float:right;
+    margin-left: 3px;
+}
+
+.game-purchase-price{
+    background-color: #000000;
+    font-size: 13px;
+    height: 26px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 8px;
+    margin-left: 3px;
+}
+
+.game-purchase-price span{
+    font-weight:bold;
+    font-size:15px;
+}
+.game-purchase-button .btn-addtocart{
+    float: right;
+}
+
+.game-purchase-button .btn-addtocart a{
+    background-image: url("../images/btn_addtocart.gif");
+    background-repeat: repeat-x;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 11px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 11px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 3px 1px 5px #888;
+    margin-left:40px;
+}
+
+.game-description{
+    line-height: 1.5em;
+    margin-bottom: 18px;
+}
+
+.game-description h2{
+    margin-bottom: 6px;
+    margin-top: 18px;
+    color: #FFFFFF;
+    font-size:15px;
+}
+
+.game-information-tab{
+    background-color: #292F35;
+    background-image: url("../images/right_blue.png");
+    background-repeat: no-repeat;
+    width: 308px;
+    height: 25px;
+    margin-top:316px;
+}
+
+.game-information{
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    padding-left: 16px;
+    padding-top: 5px;
+}
+
+.details-block{
+    background-position: right bottom;
+    border:solid 1px #262626;
+    background-color: #262626;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.details-block li{
+    margin-bottom: 6px;
+    color: #626366;
+    font-weight: bold;
+}
+
+.details-block li.last{
+    margin-bottom: 0px;
+}
+
+.details-block span{
+    color: #ffffff;
+}
+/* end game pager */
+
+
+
+/*cart css*/
+
+h2.cart-title{
+    color: #B0AEAC;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.cart-area{
+    background-color: #000000;
+    border: 1px solid #4D4B49;
+    color: #B0AEAC;
+    line-height: 18px;
+    position: relative;
+}
+
+.cart-game{
+    height: 77px;
+    line-height: 16px;
+    position: relative;
+}
+
+.cart-game-price.discount{
+    top: 15px;
+}
+
+.cart-game-price{
+    position: absolute;
+    right: 14px;
+    text-align: right;
+    top: 20px;
+}
+
+.cart-game-price .original-price{
+    color: #626366;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.cart-game-price .final-price{
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.cart-game-image{
+    position: absolute;
+    left: 16px;
+    top: 16px;
+}
+
+.checkout{
+    padding: 30px;
+    background-color: #262626;
+    line-height: 18px;
+    margin-top: 8px;
+    position: relative;
+}
+
+.button-continue{
+    color: #FFFFFF;
+    background-image: url("../images/button_checkout_blue.png");
+    background-repeat: repeat-x;
+    cursor: pointer;
+    display: block;
+    font-size: 11px;
+    height: 28px;
+    line-height: 24px;
+    padding: 0 17px;
+    top: 12px;
+    left: 10px;
+    text-align: center;
+    float: left;
+    font-weight: bold;
+    position: absolute;
+
+}
+
+.button-checkout{
+    background-image:url("../images/button_checkout_green.png");
+    color: #FFFFFF;
+    background-repeat: repeat-x;
+    cursor: pointer;
+    display: block;
+    font-size: 11px;
+    height: 28px;
+    line-height: 24px;
+    padding: 0 17px;
+    text-align: center;
+    float: right;
+    font-weight: bold;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.button-checkout.delete {
+    background: none;
+    background-color: #a10000;
+}
+
+.cart-icon{
+    float:left;
+    padding-right: 8px;
+}
+/*end cart css*/
+
+/*start about css*/
+
+h1.about-title{
+    font-size: 30px;
+    margin-top: 14px;
+
+}
+
+.features{
+    float: left;
+    margin-right: 16px;
+    margin-top: 10px;
+}
+
+.features-title{
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.features-main{
+    margin-top: 8px;
+    color: #898A8C;
+    font-size: 14px;
+}
+
+.line.about{
+    margin-top: 20px;
+}
+
+.features.right{
+     float: right;
+}
+/*end about css*/
+
+
+/*checkout dialog css */
+.dialog.checkout .dialog-content.step-1 {
+    text-align: center;
+}
+
+.dialog.checkout .dialog-content.step-2,.dialog-content.step-3 {
+    display:none;
+}
+
+.dialog.checkout .amount {
+    font-weight:bold;
+    font-size:14px;
+    color:#ffffff;
+}
+
+.dialog.checkout label {
+}
+
+/*news css*/
+h1.news{
+    font-size: 30px;
+}
+
+.news-title{
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.news-main{
+    color: #BBBBBB;
+    line-height: 17px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.source{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*end news css*/
