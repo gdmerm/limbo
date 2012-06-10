@@ -18,6 +18,10 @@ class Limbo {
 		}
     }
 
+	public static function redirect($url="") {
+		header('Location: ' . self::$configuration['root'] . $url);
+	}
+
 	public static function mysqldate($phpdate) {
 		return date('Y-m-d H:i:s', $phpdate);
 	}

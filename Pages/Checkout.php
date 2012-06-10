@@ -12,7 +12,7 @@ class Checkout extends LMBPageController
 	{
 		LoginController::getUserInfo();
 		if (User::$isGuest)
-			header('Location: /limbo');
+			Limbo::redirect();
 
 		$db = Limbo::getDb();
 		LoginController::getUserInfo();

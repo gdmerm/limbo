@@ -10,7 +10,7 @@ $dayOffers = parse_ini_file("configuration/genres.ini", 1);
 		<div class="imageblock">
 			<?php foreach ($dayOffers['dayOffer'] as $index => $product): ?>
 			<div class="tinyimg<?php echo ($index > 0) ? "2" : "" ?>">
-				<a href="#"><img src="<?php echo $config["assets"] ?>/images/thumbs/<?php echo $product ?>/tiny.jpg"/></a>
+				<a href="<?php echo $config['root'] ?>/game?id=<?php echo $product ?>"><img src="<?php echo $config["assets"] ?>/images/thumbs/<?php echo $product ?>/tiny.jpg"/></a>
 			</div>
 			<?php endforeach ?>
 		</div>

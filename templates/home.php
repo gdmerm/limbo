@@ -1,5 +1,6 @@
 <?php include("configuration/config.php"); ?>
 <?php $view = json_decode($viewData); ?>
+<?php $currentPage = "home" ?>
 
 <?php include("common/header.php") ?>
 

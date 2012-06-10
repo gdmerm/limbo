@@ -49,6 +49,6 @@ class cart extends LMBPageController
 				$shoppingCartController->save($cartFields);
 			}
 		}
-		header('Location: /limbo/cart');
+		Limbo::redirect("/cart");
 	}
 }

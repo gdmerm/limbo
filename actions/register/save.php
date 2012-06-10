@@ -31,7 +31,7 @@ class Register extends LMBPageController
 			$login->setUserAsLoggedIn($uid);
 
 			//now redirect to home
-			header('Location: /limbo');
+			Limbo::redirect();
 		}
 	}
 }

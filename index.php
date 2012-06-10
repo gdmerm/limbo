@@ -2,6 +2,7 @@
 date_default_timezone_set("Europe/London");
 session_start();
 include_once("configuration/local.php");
+include("configuration/config.php");
 require_once("application/Limbo.php");
 require_once("controllers/LMBPageController.php");
 require_once("controllers/DBTableController.php");
@@ -21,6 +22,7 @@ $action = $_GET["a"];
 
 //spawn dispatchers
 Limbo::prepareDatabaseLink($local);
+Limbo::setConfiguration($config);
 
 if ($controllerId == "pagehome") {
 	$pageConfiguration = parse_ini_file("configuration/home.ini", 1);

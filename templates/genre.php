@@ -1,5 +1,6 @@
 <?php include("configuration/config.php"); ?>
 <?php $view = json_decode($viewData); ?>
+<?php $currentPage = "genres" ?>
 
 <?php include("common/header.php") ?>
 

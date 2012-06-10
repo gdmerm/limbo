@@ -12,10 +12,10 @@ class cart extends LMBPageController
 	{
 		$itemid = (isset($_GET['id'])) ? (int) $_GET['id'] : 0;
 		if ($itemid === 0)
-			header('Location: /limbo');
+			Limbo::redirect();
 		$cart = new ShoppingCartController();
 		$cart->setDBlink(Limbo::getDb());
 		$cart->removeItem($itemid);
-		header('Location: /limbo/cart');
+		Limbo::redirect("/cart");
 	}
 }

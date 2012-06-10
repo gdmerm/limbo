@@ -34,6 +34,34 @@ a:active{outline:0;}
 #tagCloudContainer{margin-top:20px;}
 *{outline:none;}
 
+
+/* sticky-footer hack */
+html,body {height:100%}
+.sticky-footer .wrapper {min-height:100%}
+.sticky-footer #main {
+    overflow:auto;
+    padding-bottom:150px;
+}
+.sticky-footer #footer {
+    position:relative;
+    margin-top:-150px;
+    height:150px;
+    clear:both;
+    padding:0;
+    float:none;
+}
+/*Opera Fix*/
+body.sticky-footer:before {
+    content:"";
+    height:100%;
+    float:left;
+    width:0;
+    margin-top:-32767px;
+}
+/* end sticky footer fix */
+
+
+
 aside {
     float:right !important;
 }
@@ -614,9 +642,7 @@ div.rightcolumn{
 
 .rightcolumn .gamenewsblock{
     background-position: right bottom;
-    border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #262626;
-    border-style: none none none solid;
-    border-width: medium medium medium 1px;
+    border:solid 1px #262626;
     background-color: #262626;
     padding: 16px;
     margin-bottom: 20px;
@@ -668,9 +694,7 @@ div.rightcolumn{
 
 .rightcolumn .mainblock{
     background-position: right bottom;
-    border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #262626;
-    border-style: none none none solid;
-    border-width: medium medium medium 1px;
+    border:solid 1px #262626;
     background-color: #262626;
     padding: 16px;
 
@@ -1116,9 +1140,7 @@ tiny-cap-image {
 
 .details-block{
     background-position: right bottom;
-    border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #262626;
-    border-style: none none none solid;
-    border-width: medium medium medium 1px;
+    border:solid 1px #262626;
     background-color: #262626;
     padding: 16px;
     margin-bottom: 20px;

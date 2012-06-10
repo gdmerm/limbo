@@ -11,6 +11,7 @@ class Cart extends LMBPageController
 	public function initialize()
 	{
 		//collect parameters
+		$config = Limbo::getConfiguration();
 		$productid = (isset($_GET['id'])) ? (int) $_GET['id'] : 0;
 		$sessionid = session_id();
 		$now = new DateTime();
@@ -27,7 +28,7 @@ class Cart extends LMBPageController
 		$productPrice = $productsController->getPrice($productid);
 
 		if ($shoppingCartController->alreadyCheckedIn($productid, $sessionid)) {
-			header('Location: /limbo/cart');
+			header('Location: ' . $config['root'] . '/cart');
 		} else {
 			//insert action
 			$cartFields = array(
@@ -37,7 +38,7 @@ class Cart extends LMBPageController
 				'creationDate' => $mysqldate,
 			);
 			$shoppingCartController->save($cartFields);
-			header('Location: /limbo/cart');
+			header('Location: ' . $config['root'] . '/cart');
 		}
 
 	}

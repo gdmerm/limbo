@@ -1,12 +1,36 @@
 <?php include("configuration/config.php"); ?>
+<?php $currentPage = "cart" ?>
 <?php $view = json_decode($viewData); ?>
 
 <?php include("common/header.php") ?>
 
-<?php include("common/naviMenu.php") ?>
-
-
+<div class="wrapper">
 <div id="main">
+
+	<!--Start Global Header-->
+	<div id="global-header">
+		<div class="content">
+			<div class="logo">
+				<a href="<?php echo $config["root"] ?>"><img border="0" src="<?php echo $config["assets"] ?>/images/logo.jpg" alt="LIMBO"></a>
+			</div>
+			<a href="<?php echo $config["root"] ?>" class="header-item-active">STORE</a>
+			<a href="<?php echo $config["root"] ?>/news/" class="header-item">NEWS</a>
+			<a href="<?php echo $config["root"] ?>/about" class="header-item">ABOUT</a>
+			<a href="<?php echo $config["root"] ?>/support" class="header-item">SUPPORT</a>
+			<div class="global-actions">
+				<a href="<?php echo $config["root"] ?>/cart"><div class="cart-icon"><img src="<?php echo $config["assets"] ?>/images/cart.png"></div></a>
+				<?php if (!isset($view->data->member) || is_null($view->data->member)) { ?>
+				<a class="register" href="<?php echo $config["root"] ?>/register/">SIGN UP FOR FREE</a> | <a class="register login" href="#">Sign in</a>
+				<?php } else { ?>
+				<a class="register" href="<?php echo $config["root"] ?>/#"><?php echo $view->data->member->email ?></a> | <a class="register" href="<?php echo $config["root"] ?>/members/logout">Logout</a>
+				<!-- welcome <a class="register" href="<?php echo $config["root"] ?>/#"><?php echo $view->data->member->firstName ?></a> | <a class="register" href="#">Logout</a> -->
+				<?php } ?>
+			</div>
+		</div>
+		<!--End global Header-->
+	</div>
+
+	<?php include("common/naviMenu.php") ?>
 
 	<div id="main-content">
         <h2 class="cart-title">My Cart</h2>
@@ -55,7 +79,7 @@
                 <a class="button-continue" href="<?php echo $config['root'] ?>">Continue Shopping</a>
             </div>
 
-            <a href="<?php echo $config['root'] ?>/checkout"><div class="button-checkout">Checkout</div></a>
+            <a href="<?php echo $config['root'] ?>/checkout"><div class="button-checkout" data-hook="button-checkout">Checkout</div></a>
 
 
 
@@ -73,6 +97,7 @@
 	</div>
 
 </div>
+</div>
 
 <?php include("common/footer.php") ?>
 
@@ -84,7 +109,7 @@
 
 	$(document).ready(function () {
 		if (!LIMBO.USER.isLogged) {
-			$(".button-checkout").on("click", function (e) {
+			$("div[data-hook=button-checkout]").on("click", function (e) {
 				e.preventDefault();
 				$(".dialog.login-prompt").modal({
 					overlayClose: true,
