@@ -58,7 +58,6 @@ body.sticky-footer:before {
     margin-top:-32767px;
 }
 /* end sticky footer fix */
-
 aside {
     float:right !important;
 }
@@ -1007,8 +1006,6 @@ tiny-cap-image {
 .green {
     background-color: #adff2f;
 }
-<<<<<<< HEAD
-=======
 
 .nivoSlider {
     position:relative;
