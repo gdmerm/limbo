@@ -157,7 +157,7 @@
                                 <a href="<?php echo $config['root'] ?>/game?id=1"><img class="tiny-cap-image" src="<?php echo $config["assets"] ?>/images/thumbs/1/tiny.jpg"></a>
                             </div>
                             <div class="tab-games-desc">
-                                <a href="#"><h4>Max Payne 3</h4></a>
+                                <a href="<?php echo $config['root'] ?>/game?id=1"><h4>Max Payne 3</h4></a>
                                 <div class="genre-release">
                                     Action - Available : 1 June 2012
                                 </div>
