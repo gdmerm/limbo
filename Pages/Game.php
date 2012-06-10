@@ -1,11 +1,5 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: gdmerm
- * Date: 6/7/12
- * Time: 9:58 PM
- * To change this template use File | Settings | File Templates.
- */
+
 class Game extends LMBPageController
 {
 	public function initialize()

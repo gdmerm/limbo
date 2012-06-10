@@ -1,11 +1,5 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: gdmerm
- * Date: 6/8/12
- * Time: 10:27 AM
- * To change this template use File | Settings | File Templates.
- */
+
 class cart extends LMBPageController
 {
 	public function initialize()

@@ -743,7 +743,8 @@ div.rightcolumn{
 }
 
 .rightcolumn .mainblock .btn-addtocart a{
-    background-image: url("http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_repeat.gif");
+    background-image: url("../images/btn_addtocart.gif");
+../images/right_blue.png
     background-repeat: repeat-x;
     color: #FFFFFF;
     display: inline-block;
@@ -1094,7 +1095,7 @@ tiny-cap-image {
 }
 
 .game-purchase-button .btn-addtocart a{
-    background-image: url("http://cdn.store.steampowered.com/public/images/v5/btn_addtocart_repeat.gif");
+    background-image: url("../images/btn_addtocart.gif");
     background-repeat: repeat-x;
     color: #FFFFFF;
     display: inline-block;
@@ -1223,7 +1224,7 @@ h2.cart-title{
 
 .button-continue{
     color: #FFFFFF;
-    background-image: url("http://cdn.store.steampowered.com/public/images/v5/btn_checkout_blue_bg.png");
+    background-image: url("../images/button_checkout_blue.png");
     background-repeat: repeat-x;
     cursor: pointer;
     display: block;
@@ -1241,7 +1242,7 @@ h2.cart-title{
 }
 
 .button-checkout{
-    background-image:url("http://cdn.store.steampowered.com/public/images/v5/btn_checkout_active_bg.png");
+    background-image:url("../images/button_checkout_green.png");
     color: #FFFFFF;
     background-repeat: repeat-x;
     cursor: pointer;

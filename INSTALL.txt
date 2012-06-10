@@ -1,0 +1,78 @@
+LIMBO SAMPLE ESHOP APPLICATION SETUP
+--------------------------------------
+
+
+ENVIRONMENT
+--------------------------------
+1. Install Apache 2.2.x
+2. Download PHP 5.3.x or later
+3. Setup you apache with PHP	
+4. Install mysql 5.1.x or later
+
+
+APPLICATION
+--------------------------------
+1. Create a new folder in your webserver document root called "limbo".
+
+2. Paste the contents of the "limbo" folder in the thesis CD into the newly created folder.
+
+3. Create an empty mysql database called "limbo"
+
+	> mysql -u<username> -p<password>
+	> create database limbo;
+	> exit;
+	
+4. Locate the limbo-generate.sql in /document/root/limbo i.e. the folder you created in step 1
+
+5. Run the following command in a terminal
+
+	>mysql -u<username> -p<password> limbo < /path/to/limbo/root/limbo-generate.sql
+	
+6. Go to the application root folder (the folder you created in step 1) and edit the following files
+
+	a. /path/to/limbo/configuration/config.php
+
+	$config = array(
+	    "root" => "/limbo",
+	    "assets" => "/limbo/public",
+		"js" => "/limbo/public/scripts/"
+	);
+	?>
+	
+	Make sure that "root" points to the correct application root. If you named the folder in step-1 as "limbo" then the above setup is correct.
+	
+	b. Edit /path/to/limbo/configuration/limbo.php
+	
+	<?php
+	$local = array(
+	    "db" => array(
+	        "user" => "root",
+	        "password" => "password",
+	        "database" => "limbo"
+	    )
+	);
+	?>
+	
+	Make sure you supply correct username and password for mysql access. If you named the database as "limbo" then you do not need to change the "database" part.
+	
+7.	Open a browser and point to http://localhost/limbo/
+
+	The application should now start.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	

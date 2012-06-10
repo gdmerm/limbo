@@ -1,11 +1,5 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: gdmerm
- * Date: 4/15/12
- * Time: 10:00 AM
- * To change this template use File | Settings | File Templates.
- */
+
 
 class Product {
     private $productid;

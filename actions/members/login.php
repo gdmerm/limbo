@@ -13,7 +13,7 @@ class Members extends LMBPageController
 		if ($loginController->checkLogin($email, $password)) {
 			Limbo::redirect();
 		} else {
-			echo "here";
+			echo "Invalid credentials. Please try again";
 		}
 	}
 }
