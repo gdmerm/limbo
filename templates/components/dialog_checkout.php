@@ -38,6 +38,8 @@
 	<div class="dialog-content step-3 span-10 boxmodelfix">
 		<p>
 			Your payment was completed successfully. Thank you!
+
+			<a style="position:static;margin-top:10px;display:inline-block;float:none;" class="button-continue" href="<?php echo $config['root'] ?>">Continue browsing</a>
 		</p>
 	</div>
 </div>

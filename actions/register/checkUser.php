@@ -16,14 +16,17 @@ class Register extends LMBPageController
 
 		$username = isset($_GET['username']) ? $_GET['username'] : '';
 
-		$result = $validator->usernameTaken($username);
-		$output = array(
-			"success" => true,
-			"content" => array(
-				"isTaken" => $result
-			)
-		);
-		$output = json_encode($output);
+		$output = "";
+		if (trim($username) !== "") {
+			$result = $validator->usernameTaken($username);
+			$output = array(
+				"success" => true,
+				"content" => array(
+					"isTaken" => $result
+				)
+			);
+			$output = json_encode($output);
+		}
 		echo $output;
 	}
 }

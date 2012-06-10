@@ -49,7 +49,10 @@ $(document).ready(function () {
 	});
 
 	$(".searchbox input").autocomplete({
-		source: "/limbo/productactions/search"
+		source: "/limbo/productactions/search",
+		select: function (e, ui) {
+			window.location = "/limbo/game?id=" + ui.item.productid;
+		}
 	});
 });
 </script>

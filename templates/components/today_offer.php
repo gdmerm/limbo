@@ -19,7 +19,7 @@ $dayOffers = parse_ini_file("configuration/genres.ini", 1);
 			<p><?php echo $dayOffers['dayOffer_promoText']['text'] ?></p>
 		</div>
 		<div class="btn-addtocart">
-			<a href="#">ADD TO CART</a>
+			<a href="<?php echo $config['root']?>/cart/addbulk?id=1,18&offer=offeroftheday">ADD TO CART</a>
 		</div>
 		<div class="clear"></div>
 	</div>

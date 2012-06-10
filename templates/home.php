@@ -279,28 +279,6 @@
                 </div>
             </div>
 
-			<!--
-            <div class="topblock">
-                <div class="offers">Today's Offer</div>
-            </div>
-            <div class="mainblock">
-                <div class="imageblock">
-                     <div class="tinyimg">
-                         <a href="#"><img src="<?php echo $config["assets"] ?>/images/thumbs/23/tiny.jpg"/></a>
-                     </div>
-                    <div class="tinyimg2">
-                        <a href="#"><img src="<?php echo $config["assets"] ?>/images/thumbs/25/tiny.jpg"/></a>
-                    </div>
-                </div>
-                <div class="offerinfo">
-                    <p>Get Both Deus Ex & Tropico 4 for ONLY: 49,99&euro;</p>
-                </div>
-                <div class="btn-addtocart">
-                    <a href="#">ADD TO CART</a>
-                </div>
-                <div class="clear"></div>
-            </div>
-            -->
 			<?php include("components/today_offer.php") ?>
 
         </div>

@@ -18,6 +18,13 @@
             _this.slideLeft()
           }, 6000);
       }
+
+        $(".control-left").on("click", function () {
+            _this.slideRight();
+        });
+      $(".control-right").on("click", function () {
+          _this.slideLeft();
+      });
     }
 
     GameSlider.prototype.slideLeft = function() {

@@ -75,29 +75,6 @@
                     <div class="line"></div>
                     <!--End Email-->
 
-                    <!--Secret-->
-                    <div class="form-row">
-                        <div class="form-area">
-                            <label for="question">Question</label>
-                            <br>
-                            <label for="secret_answer">Secret answer</label>
-                            <input type="text" id="secret_answer" name="secret" maxlength="255">
-                        </div>
-
-                        <div class="form-notes">
-                            <br>
-                            <p>Please select a question and then type your secret answer below. This will be asked if you want to retrieve your password.</p>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="line"></div>
-                    <!--End Secret-->
-
-                     <div id="agree">
-                         <input id="i-agree-check" type="checkbox" name="i_agree_check">
-                         <label id="agree-check" for="agree-check">I agree and i am 13 years old or older</label>
-                     </div>
-
                     <a href="#">
                         <div class="create-account">Create my account</div>
                     </a>
@@ -137,6 +114,9 @@
 
 		$("#accountname").on("blur", function (e) {
 			//validate username here
+			var value = $(this).val();
+			if ($.trim(value) === '')
+				return false;
 			validator.isUserTaken($(this).val());
 		});
 

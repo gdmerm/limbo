@@ -3,7 +3,19 @@
 
   LimboValidator = (function() {
 
-    function LimboValidator() {}
+    function LimboValidator() {
+        $(".create-account").data('validationStatus', true);
+        $(".create-account").on("click", function (e) {
+            e.preventDefault();
+            $(".join-form input[type=text],input[type=password]").each(function () {
+                if ($(this).hasClass("error"))
+                    $(".create-account").data('validationStatus', false);
+            });
+            validationStatus = $(this).data("validation-status");
+            if (validationStatus)
+                $(this).parent().parent().submit();
+        })
+    }
 
     LimboValidator.prototype.isUserTaken = function(username) {
       var messagePlaceholder, promise;
